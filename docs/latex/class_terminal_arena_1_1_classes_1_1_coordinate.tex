@@ -1,0 +1,189 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Coordinate Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_coordinate}\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+
+
+Klasse, um eine Koordinate in der Konsole darzustellen.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Coordinate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_terminal_arena_1_1_classes_1_1_coordinate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a2aaebf0b9905b725a208554b01237c98}{Coordinate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Erstellt eine X/\+Y-\/\+Koordinate mit den angegebenen Werten. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_accd2d2a33a0705125b0b1e880a964dcb}{Coordinate}} ()
+\begin{DoxyCompactList}\small\item\em Erstellt eine Koordinate aus der momentanen Cursorposition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Setzt den Cursor auf die X/\+Y-\/\+Koordinate zurück. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{Next\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Setzt die Koordinate eine Zeile herunter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position von Links \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position von Oben \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Klasse, um eine Koordinate in der Konsole darzustellen. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00008}{8}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_a2aaebf0b9905b725a208554b01237c98}\label{class_terminal_arena_1_1_classes_1_1_coordinate_a2aaebf0b9905b725a208554b01237c98}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{Coordinate()}{Coordinate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Coordinate.\+Coordinate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Erstellt eine X/\+Y-\/\+Koordinate mit den angegebenen Werten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em x} & X (oder left)\\
+\hline
+{\em y} & Y (oder top)\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00025}{25}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026         \{}
+\DoxyCodeLine{00027             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}} = x;}
+\DoxyCodeLine{00028             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}} = y;}
+\DoxyCodeLine{00029         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_accd2d2a33a0705125b0b1e880a964dcb}\label{class_terminal_arena_1_1_classes_1_1_coordinate_accd2d2a33a0705125b0b1e880a964dcb}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{Coordinate()}{Coordinate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Coordinate.\+Coordinate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erstellt eine Koordinate aus der momentanen Cursorposition. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00034}{34}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035         \{}
+\DoxyCodeLine{00036             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}} = Console.CursorLeft;}
+\DoxyCodeLine{00037             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}} = Console.CursorTop;}
+\DoxyCodeLine{00038         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}\label{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!NextLine@{NextLine}}
+\index{NextLine@{NextLine}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{NextLine()}{NextLine()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Coordinate.\+Next\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setzt die Koordinate eine Zeile herunter. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00051}{51}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052         \{}
+\DoxyCodeLine{00053             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}} += 1;}
+\DoxyCodeLine{00054         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}\label{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!Reset@{Reset}}
+\index{Reset@{Reset}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Coordinate.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setzt den Cursor auf die X/\+Y-\/\+Koordinate zurück. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00043}{43}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044         \{}
+\DoxyCodeLine{00045             Console.SetCursorPosition(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00046         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}\label{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!X@{X}}
+\index{X@{X}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Coordinate.\+X\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Position von Links 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00013}{13}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}\label{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}} 
+\index{TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}!Y@{Y}}
+\index{Y@{Y}!TerminalArena.Classes.Coordinate@{TerminalArena.Classes.Coordinate}}
+\doxyparagraph{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Coordinate.\+Y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Position von Oben 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_coordinate_8cs_source_l00018}{18}} der Datei \mbox{\hyperlink{_coordinate_8cs_source}{Coordinate.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Coordinate.\+cs\end{DoxyCompactItemize}

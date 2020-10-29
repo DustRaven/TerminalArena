@@ -1,0 +1,66 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_helper}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Helper Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_helper}\index{TerminalArena.Classes.Helper@{TerminalArena.Classes.Helper}}
+
+
+Hilfsklasse. Primär für die Namensgenerierung der Kämpfer.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_terminal_arena_1_1_classes_1_1_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_helper_a46e7540b71336db6ea7dc6f0816f764e}{Get\+Random\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gibt einen zufäligen Namen aus der names.\+json-\/Datei zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Hilfsklasse. Primär für die Namensgenerierung der Kämpfer. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_helper_8cs_source_l00011}{11}} der Datei \mbox{\hyperlink{_helper_8cs_source}{Helper.\+cs}}.
+
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_helper_a46e7540b71336db6ea7dc6f0816f764e}\label{class_terminal_arena_1_1_classes_1_1_helper_a46e7540b71336db6ea7dc6f0816f764e}} 
+\index{TerminalArena.Classes.Helper@{TerminalArena.Classes.Helper}!GetRandomName@{GetRandomName}}
+\index{GetRandomName@{GetRandomName}!TerminalArena.Classes.Helper@{TerminalArena.Classes.Helper}}
+\doxyparagraph{\texorpdfstring{GetRandomName()}{GetRandomName()}}
+{\footnotesize\ttfamily static string Terminal\+Arena.\+Classes.\+Helper.\+Get\+Random\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gibt einen zufäligen Namen aus der names.\+json-\/Datei zurück. 
+
+\begin{DoxyReturn}{Rückgabe}
+string
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_helper_8cs_source_l00017}{17}} der Datei \mbox{\hyperlink{_helper_8cs_source}{Helper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018         \{}
+\DoxyCodeLine{00019             StreamReader file = File.OpenText(\textcolor{stringliteral}{@"{}names.json"{}});}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021             List<string> names = JsonConvert.DeserializeObject<List<string>>(file.ReadToEnd());}
+\DoxyCodeLine{00022             \textcolor{keywordflow}{return} names[GetRandomNumber(0, names.Count)];}
+\DoxyCodeLine{00023         \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Helper.\+cs\end{DoxyCompactItemize}

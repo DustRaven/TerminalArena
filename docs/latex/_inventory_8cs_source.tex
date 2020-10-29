@@ -1,0 +1,49 @@
+\hypertarget{_inventory_8cs_source}{}\doxysubsection{Inventory.\+cs}
+\label{_inventory_8cs_source}\index{Inventory.cs@{Inventory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_terminal_arena}{TerminalArena}}.\mbox{\hyperlink{namespace_terminal_arena_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena_1_1_classes}{TerminalArena.Classes}}}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{\Hypertarget{_inventory_8cs_source_l00010}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory}{Inventory}}}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{\Hypertarget{_inventory_8cs_source_l00015}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{00015}}         \textcolor{keyword}{public} List<IItem> \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{_inventory_8cs_source_l00020}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a9c0d56ec2857f13bdd4cbdd9f85b606b}{00020}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a9c0d56ec2857f13bdd4cbdd9f85b606b}{Capacity}} => \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}?.Count ?? 0;}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{_inventory_8cs_source_l00026}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_ab931beaa54e77c0505c501c695e80a7a}{00026}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_ab931beaa54e77c0505c501c695e80a7a}{Inventory}}(\textcolor{keywordtype}{int} capacity = 10)}
+\DoxyCodeLine{00027         \{}
+\DoxyCodeLine{00028             SetInventoryCapacity(capacity);}
+\DoxyCodeLine{00029         \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{_inventory_8cs_source_l00036}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a32c2347e3e36c1c72259cde7fd83a729}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a32c2347e3e36c1c72259cde7fd83a729}{Contains}}(Type itemType)}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_item}{IItem}} item \textcolor{keywordflow}{in} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}})}
+\DoxyCodeLine{00039             \{}
+\DoxyCodeLine{00040                 \textcolor{keywordflow}{if} (item.GetType() == itemType)}
+\DoxyCodeLine{00041                 \{}
+\DoxyCodeLine{00042                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00043                 \}}
+\DoxyCodeLine{00044             \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00047         \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \textcolor{keyword}{private} \textcolor{keywordtype}{void} SetInventoryCapacity(\textcolor{keywordtype}{int} capacity)}
+\DoxyCodeLine{00050         \{}
+\DoxyCodeLine{00051             \textcolor{keywordflow}{if} (capacity <= 0)}
+\DoxyCodeLine{00052             \{}
+\DoxyCodeLine{00053                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{00054             \}}
+\DoxyCodeLine{00055             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{00056             \{}
+\DoxyCodeLine{00057                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}} = \textcolor{keyword}{new} List<IItem>(capacity);}
+\DoxyCodeLine{00058             \}}
+\DoxyCodeLine{00059         \}}
+\DoxyCodeLine{00060     \}}
+\DoxyCodeLine{00061 \}}
+
+\end{DoxyCode}

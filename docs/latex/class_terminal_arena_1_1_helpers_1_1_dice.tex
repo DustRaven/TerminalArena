@@ -1,0 +1,171 @@
+\hypertarget{class_terminal_arena_1_1_helpers_1_1_dice}{}\doxysubsection{Terminal\+Arena.\+Helpers.\+Dice Klassenreferenz}
+\label{class_terminal_arena_1_1_helpers_1_1_dice}\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+
+
+Repräsentiert einen Würfel mit konfigurierbarer Seitenanzahl.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Helpers.\+Dice\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_terminal_arena_1_1_helpers_1_1_dice__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aafd876ab92792c45c90ee1625b317bd0}{Dice}} (int sides)
+\begin{DoxyCompactList}\small\item\em Erstellt einen Würfel mit der gewünschten Seitenzahl. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aa7577903ad6d46d8e171e053ed6a732b}{Dice}} ()
+\begin{DoxyCompactList}\small\item\em Erstellt einen Würfel mit 6 Seiten. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}} ()
+\begin{DoxyCompactList}\small\item\em Würfelt mit dem Würfel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}{Get\+Sides}} ()
+\begin{DoxyCompactList}\small\item\em Gibt die Anzahl der Seiten zurück. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_abd03e6e6678473420197b021b6d11ad9}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Gibt eine Beschreibung des \char`\"{}\+Dice\char`\"{}-\/Objekts als Zeichenfolge zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Repräsentiert einen Würfel mit konfigurierbarer Seitenanzahl. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00008}{8}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_helpers_1_1_dice_aafd876ab92792c45c90ee1625b317bd0}\label{class_terminal_arena_1_1_helpers_1_1_dice_aafd876ab92792c45c90ee1625b317bd0}} 
+\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}!Dice@{Dice}}
+\index{Dice@{Dice}!TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+\doxyparagraph{\texorpdfstring{Dice()}{Dice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Helpers.\+Dice.\+Dice (\begin{DoxyParamCaption}\item[{int}]{sides }\end{DoxyParamCaption})}
+
+
+
+Erstellt einen Würfel mit der gewünschten Seitenzahl. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em sides} & Seiten des Würfels\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00017}{17}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018         \{}
+\DoxyCodeLine{00019             \_sides = sides;}
+\DoxyCodeLine{00020             \_random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00021         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_helpers_1_1_dice_aa7577903ad6d46d8e171e053ed6a732b}\label{class_terminal_arena_1_1_helpers_1_1_dice_aa7577903ad6d46d8e171e053ed6a732b}} 
+\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}!Dice@{Dice}}
+\index{Dice@{Dice}!TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+\doxyparagraph{\texorpdfstring{Dice()}{Dice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Helpers.\+Dice.\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erstellt einen Würfel mit 6 Seiten. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00026}{26}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027         \{}
+\DoxyCodeLine{00028             \_sides = 6;}
+\DoxyCodeLine{00029             \_random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00030         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}\label{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}} 
+\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}!GetSides@{GetSides}}
+\index{GetSides@{GetSides}!TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+\doxyparagraph{\texorpdfstring{GetSides()}{GetSides()}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Helpers.\+Dice.\+Get\+Sides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gibt die Anzahl der Seiten zurück. 
+
+\begin{DoxyReturn}{Rückgabe}
+int
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00045}{45}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046         \{}
+\DoxyCodeLine{00047             \textcolor{keywordflow}{return} \_sides;}
+\DoxyCodeLine{00048         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}\label{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}} 
+\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}!Roll@{Roll}}
+\index{Roll@{Roll}!TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+\doxyparagraph{\texorpdfstring{Roll()}{Roll()}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Helpers.\+Dice.\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Würfelt mit dem Würfel. 
+
+\begin{DoxyReturn}{Rückgabe}
+int
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00036}{36}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{return} \_random.Next(1, \_sides + 1);}
+\DoxyCodeLine{00039         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_helpers_1_1_dice_abd03e6e6678473420197b021b6d11ad9}\label{class_terminal_arena_1_1_helpers_1_1_dice_abd03e6e6678473420197b021b6d11ad9}} 
+\index{TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}!ToString@{ToString}}
+\index{ToString@{ToString}!TerminalArena.Helpers.Dice@{TerminalArena.Helpers.Dice}}
+\doxyparagraph{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Terminal\+Arena.\+Helpers.\+Dice.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gibt eine Beschreibung des \char`\"{}\+Dice\char`\"{}-\/Objekts als Zeichenfolge zurück. 
+
+\begin{DoxyReturn}{Rückgabe}
+string
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_dice_8cs_source_l00054}{54}} der Datei \mbox{\hyperlink{_dice_8cs_source}{Dice.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055         \{}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{return} \$\textcolor{stringliteral}{"{}Würfele mit einem \{\_sides\}-\/seitigen Würfel"{}};}
+\DoxyCodeLine{00057         \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Dice.\+cs\end{DoxyCompactItemize}

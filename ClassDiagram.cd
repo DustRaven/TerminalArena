@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="TerminalArena.Classes.Arena">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAASYAAAAAABAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Arena.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.Coordinate">
+    <Position X="12.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Classes\Coordinate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.Fight">
+    <Position X="8.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAgCAAAAAABQAAAAAAAAAgAQAA=</HashCode>
+      <FileName>Classes\Fight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.Helper">
+    <Position X="3" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.Inventory">
+    <Position X="3" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAABAAACAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Classes\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Helpers.Dice">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAEACAAAAAAAAAAAAAACAAAAAAAAAE=</HashCode>
+      <FileName>Helpers\Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.HealthPotion">
+    <Position X="4" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAE=</HashCode>
+      <FileName>Classes\HealthPotion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TerminalArena.Classes.LargeHealthPotion">
+    <Position X="4.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\LargeHealthPotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.MediumHealthPotion">
+    <Position X="2.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\MediumHealthPotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.SmallHealthPotion">
+    <Position X="0.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SmallHealthPotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerminalArena.Classes.Fighter">
+    <Position X="9.25" Y="3.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQCACACAIAAACAAEAAAAAAQAAIAIAgCAABAAIgEAQAA=</HashCode>
+      <FileName>Classes\Fighter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TerminalArena.Interfaces.IEntity">
+    <Position X="6.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAAAAAAAAAAAQAAIAAAAAAAAAAIgAAQAA=</HashCode>
+      <FileName>Interfaces\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TerminalArena.Interfaces.IItem">
+    <Position X="1.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Interfaces\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

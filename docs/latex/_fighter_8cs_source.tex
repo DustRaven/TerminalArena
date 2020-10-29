@@ -1,0 +1,170 @@
+\hypertarget{_fighter_8cs_source}{}\doxysubsection{Fighter.\+cs}
+\label{_fighter_8cs_source}\index{Fighter.cs@{Fighter.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{00003 \textcolor{keyword}{using} System.Drawing;}
+\DoxyCodeLine{00004 \textcolor{keyword}{using} Pastel;}
+\DoxyCodeLine{00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_terminal_arena}{TerminalArena}}.\mbox{\hyperlink{namespace_terminal_arena_1_1_helpers}{Helpers}};}
+\DoxyCodeLine{00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_terminal_arena}{TerminalArena}}.\mbox{\hyperlink{namespace_terminal_arena_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena_1_1_classes}{TerminalArena.Classes}}}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00014}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}} : \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{IEntity}}}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{        \#region Eigenschaften}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00021}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{00021}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00026}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{00026}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00031}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}{00031}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}{Defense}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00036         \textcolor{keyword}{private} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00041}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{00041}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00046}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{00046}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00051         \textcolor{keyword}{private} \textcolor{keywordtype}{int} MaxHealth \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00056         \textcolor{keyword}{private} readonly Inventory \_inventory;}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00061}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{00061}}         \textcolor{keyword}{public} List<Action> \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{preprocessor}{        \#endregion}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065 \textcolor{preprocessor}{        \#region Methoden}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00074}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4d13d1c60cb33f40012e6f744beb8736}{00074}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4d13d1c60cb33f40012e6f744beb8736}{Fighter}}(\textcolor{keywordtype}{string} name, \textcolor{keywordtype}{int} health, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} defense)}
+\DoxyCodeLine{00075         \{}
+\DoxyCodeLine{00076             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}} = name;}
+\DoxyCodeLine{00077             MaxHealth = health;}
+\DoxyCodeLine{00078             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = health;}
+\DoxyCodeLine{00079             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}} = damage;}
+\DoxyCodeLine{00080             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}{Defense}} = defense;}
+\DoxyCodeLine{00081             \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}(6);}
+\DoxyCodeLine{00082             \_inventory = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory}{Inventory}}();}
+\DoxyCodeLine{00083             \_inventory.Items.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_small_health_potion}{SmallHealthPotion}}());}
+\DoxyCodeLine{00084             \_inventory.Items.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_medium_health_potion}{MediumHealthPotion}}());}
+\DoxyCodeLine{00085             \_inventory.Items.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_large_health_potion}{LargeHealthPotion}}());}
+\DoxyCodeLine{00086             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}} = \textcolor{keyword}{new} List<Action>();}
+\DoxyCodeLine{00087         \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00093}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}{00093}}         \textcolor{keyword}{public} \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}{Attack}}(\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{IEntity}} enemy)}
+\DoxyCodeLine{00094         \{}
+\DoxyCodeLine{00095             \textcolor{keywordtype}{int} calculatedDamage = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}} + \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}();}
+\DoxyCodeLine{00096             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = (\$\textcolor{stringliteral}{"{}\{Name\} verursacht \{calculatedDamage\} Schaden."{}});}
+\DoxyCodeLine{00097             enemy.\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}{Defend}}(calculatedDamage);}
+\DoxyCodeLine{00098         \}}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00104}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}{00104}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}{Defend}}(\textcolor{keywordtype}{int} damage)}
+\DoxyCodeLine{00105         \{}
+\DoxyCodeLine{00106             \textcolor{keywordtype}{string} message;}
+\DoxyCodeLine{00107             \textcolor{keywordtype}{int} damageTaken = damage -\/ \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}();}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{if} (damageTaken > 0)}
+\DoxyCodeLine{00109             \{}
+\DoxyCodeLine{00110                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} -\/= damageTaken;}
+\DoxyCodeLine{00111                 message = \$\textcolor{stringliteral}{"{}\{Name\} hat \{damageTaken\} Punkte Schaden genommen"{}};}
+\DoxyCodeLine{00112                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} <= 0)}
+\DoxyCodeLine{00113                 \{}
+\DoxyCodeLine{00114                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = 0;}
+\DoxyCodeLine{00115                     message += \textcolor{stringliteral}{"{} und ist gestorben"{}};}
+\DoxyCodeLine{00116                 \}}
+\DoxyCodeLine{00117             \}}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00119             \{}
+\DoxyCodeLine{00120                 message = \$\textcolor{stringliteral}{"{}\{Name\} hat den Schaden geblockt"{}};}
+\DoxyCodeLine{00121             \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = message;}
+\DoxyCodeLine{00124         \}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00130}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{00130}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}()}
+\DoxyCodeLine{00131         \{}
+\DoxyCodeLine{00132             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} > 0;}
+\DoxyCodeLine{00133         \}}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00142}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}{00142}}         \textcolor{keyword}{protected} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}{BarGraphic}}(\textcolor{keywordtype}{int} current, \textcolor{keywordtype}{int} maximum)}
+\DoxyCodeLine{00143         \{}
+\DoxyCodeLine{00144             \textcolor{keywordtype}{string} bar = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00145             \textcolor{keywordtype}{int} total = 20;}
+\DoxyCodeLine{00146             \textcolor{keywordtype}{double} count = Math.Round(((\textcolor{keywordtype}{double}) current / maximum) * total);}
+\DoxyCodeLine{00147             \textcolor{keywordflow}{if} (count == 0 \&\& \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}())}
+\DoxyCodeLine{00148             \{}
+\DoxyCodeLine{00149                 count = 1;}
+\DoxyCodeLine{00150             \}}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < count; i++)}
+\DoxyCodeLine{00153             \{}
+\DoxyCodeLine{00154                 bar += \textcolor{stringliteral}{"{}█"{}};}
+\DoxyCodeLine{00155             \}}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157             \textcolor{keywordflow}{return} bar.PadRight(total);}
+\DoxyCodeLine{00158         \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00164}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aecd7b58f650f2304712b0786460fdd0f}{00164}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aecd7b58f650f2304712b0786460fdd0f}{HealthBar}}()}
+\DoxyCodeLine{00165         \{}
+\DoxyCodeLine{00166             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}["{}} + \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}{BarGraphic}}(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}}, MaxHealth).Pastel(Color.Red).PastelBg(Color.DarkRed) +}
+\DoxyCodeLine{00167                    \$\textcolor{stringliteral}{"{}] \{Health\} / \{MaxHealth\}"{}};}
+\DoxyCodeLine{00168         \}}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00174}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aec1b87c4ace3c29d80be0a5849bed459}{00174}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aec1b87c4ace3c29d80be0a5849bed459}{ToString}}()}
+\DoxyCodeLine{00175         \{}
+\DoxyCodeLine{00176             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}};}
+\DoxyCodeLine{00177         \}}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{\Hypertarget{_fighter_8cs_source_l00183}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a99c88f590899f6d883d66acce44fa0f4}{00183}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a99c88f590899f6d883d66acce44fa0f4}{DoAction}}(\textcolor{keywordtype}{string} action)}
+\DoxyCodeLine{00184         \{}
+\DoxyCodeLine{00185             \textcolor{keywordflow}{switch} (action)}
+\DoxyCodeLine{00186             \{}
+\DoxyCodeLine{00187                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}potion"{}}:}
+\DoxyCodeLine{00188                 \{}
+\DoxyCodeLine{00189                     UsePotion();}
+\DoxyCodeLine{00190                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00191                 \}}
+\DoxyCodeLine{00192                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}attack"{}}:}
+\DoxyCodeLine{00193                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}flee"{}}:}
+\DoxyCodeLine{00195                 \{}
+\DoxyCodeLine{00196                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = 0;}
+\DoxyCodeLine{00197                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = \$\textcolor{stringliteral}{"{}\{Name\} hat aufgegeben."{}};}
+\DoxyCodeLine{00198                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00199                 \}}
+\DoxyCodeLine{00200             \}}
+\DoxyCodeLine{00201         \}}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         \textcolor{keyword}{private} \textcolor{keywordtype}{void} UsePotion()}
+\DoxyCodeLine{00204         \{}
+\DoxyCodeLine{00205             \textcolor{keywordflow}{if} (\_inventory.Contains(typeof(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion}{HealthPotion}})))}
+\DoxyCodeLine{00206             \{}
+\DoxyCodeLine{00207                 \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_item}{IItem}} item = \_inventory.Items.Find(toFind => toFind.GetType() == typeof(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion}{HealthPotion}}));}
+\DoxyCodeLine{00208                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion}{HealthPotion}} tempItem = (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion}{HealthPotion}}) item;}
+\DoxyCodeLine{00209                 \textcolor{keywordflow}{if} (tempItem != \textcolor{keyword}{null})}
+\DoxyCodeLine{00210                 \{}
+\DoxyCodeLine{00211                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} + tempItem.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion_a8bd7b2b972060e991a0e4874556c830d}{HpBonus}} > MaxHealth)}
+\DoxyCodeLine{00212                     \{}
+\DoxyCodeLine{00213                         \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = MaxHealth;}
+\DoxyCodeLine{00214                     \}}
+\DoxyCodeLine{00215                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00216                     \{}
+\DoxyCodeLine{00217                         \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} += tempItem.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_health_potion_a8bd7b2b972060e991a0e4874556c830d}{HpBonus}};}
+\DoxyCodeLine{00218                     \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220                     \_inventory.Items.Remove(item);}
+\DoxyCodeLine{00221                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = \$\textcolor{stringliteral}{"{}\{Name\} hat \{item.Name\} benutzt."{}};}
+\DoxyCodeLine{00222                 \}}
+\DoxyCodeLine{00223             \}}
+\DoxyCodeLine{00224             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00225             \{}
+\DoxyCodeLine{00226                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = \$\textcolor{stringliteral}{"{}\{Name\} hat versucht, einen Trank zu benutzen, hat aber keinen mehr."{}};}
+\DoxyCodeLine{00227                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}}.Remove(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}}.Find(action => action.What == \textcolor{stringliteral}{"{}potion"{}}));}
+\DoxyCodeLine{00228             \}}
+\DoxyCodeLine{00229         \}}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231 \textcolor{preprocessor}{        \#endregion}}
+\DoxyCodeLine{00232     \}}
+\DoxyCodeLine{00233 \}}
+
+\end{DoxyCode}

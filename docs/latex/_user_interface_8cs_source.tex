@@ -1,0 +1,355 @@
+\hypertarget{_user_interface_8cs_source}{}\doxysubsection{User\+Interface.\+cs}
+\label{_user_interface_8cs_source}\index{UserInterface.cs@{UserInterface.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena_1_1_classes}{TerminalArena.Classes}}}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00010}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{UserInterface}}}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{00012         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} TopLeft = \textcolor{stringliteral}{'╔'};}
+\DoxyCodeLine{00013         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} TopRight = \textcolor{stringliteral}{'╗'};}
+\DoxyCodeLine{00014         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} BottomLeft = \textcolor{stringliteral}{'╚'};}
+\DoxyCodeLine{00015         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} BottomRight = \textcolor{stringliteral}{'╝'};}
+\DoxyCodeLine{00016         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} Horizontal = \textcolor{stringliteral}{'═'};}
+\DoxyCodeLine{00017         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} Vertical = \textcolor{stringliteral}{'║'};}
+\DoxyCodeLine{00018         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} VerticalLeft = \textcolor{stringliteral}{'╠'};}
+\DoxyCodeLine{00019         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} VerticalRight = \textcolor{stringliteral}{'╣'};}
+\DoxyCodeLine{00020         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} HorizontalTop = \textcolor{stringliteral}{'╦'};}
+\DoxyCodeLine{00021         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} HorizontalBottom = \textcolor{stringliteral}{'╩'};}
+\DoxyCodeLine{00022         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{char} Cross = \textcolor{stringliteral}{'╬'};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{int} TitleHeight = 2;}
+\DoxyCodeLine{00025         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{int} Padding = 1;}
+\DoxyCodeLine{00026         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}[] \_contentArea;}
+\DoxyCodeLine{00027         \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} \_contentHeight;}
+\DoxyCodeLine{00028         \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} \_contentWidth;}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}[] \_actionArea;}
+\DoxyCodeLine{00031         \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} \_actionHeight;}
+\DoxyCodeLine{00032         \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} \_actionWidth;}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00037}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0d9b3bfed2d941a1e48850206628ffae}{00037}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0d9b3bfed2d941a1e48850206628ffae}{UserInterface}}(\textcolor{keywordtype}{string} title)}
+\DoxyCodeLine{00038         \{}
+\DoxyCodeLine{00039             Console.Clear();}
+\DoxyCodeLine{00040             SetupConsole();}
+\DoxyCodeLine{00041             DrawOuterBorder();}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043             \_contentHeight =}
+\DoxyCodeLine{00044                 (Console.WindowHeight / 3) * 2 -\/ TitleHeight -\/ Padding -\/}
+\DoxyCodeLine{00045                 2; \textcolor{comment}{// Fensterhöhe / 3 * 2 -\/ Titel + Trenner -\/ Abstand oben \& unten -\/ Rahmen oben \& unten}}
+\DoxyCodeLine{00046             \_contentWidth =}
+\DoxyCodeLine{00047                 Console.WindowWidth -\/ 2 -\/ 2 * Padding; \textcolor{comment}{// Fensterbreite -\/ Rahmen links \& rechts -\/ Abstand links \& rechts}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049             \_contentArea = \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00050             \{}
+\DoxyCodeLine{00051                 \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(1 + Padding, TitleHeight + Padding + 1), \textcolor{comment}{// Inhaltsfläche links oben}}
+\DoxyCodeLine{00052                 \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(\_contentWidth, \_contentHeight) \textcolor{comment}{// Inhaltsfläche rechts unten}}
+\DoxyCodeLine{00053             \};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056             \_actionHeight = Console.WindowHeight -\/ \_contentHeight -\/ Padding * 2 -\/ 2 -\/ TitleHeight;}
+\DoxyCodeLine{00057             \_actionWidth = \_contentWidth;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059             \_actionArea = \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00060             \{}
+\DoxyCodeLine{00061                 \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(1 + Padding, Console.WindowHeight -\/ \_actionHeight + Padding),}
+\DoxyCodeLine{00062                 \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(Console.WindowWidth -\/ 1 -\/ Padding, Console.WindowHeight -\/ 1 -\/ Padding)}
+\DoxyCodeLine{00063             \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(title);}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068         \textcolor{keyword}{private} \textcolor{keywordtype}{void} SetupConsole()}
+\DoxyCodeLine{00069         \{}
+\DoxyCodeLine{00070             Console.CursorVisible = \textcolor{keyword}{false};}
+\DoxyCodeLine{00071         \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \textcolor{keyword}{private} \textcolor{keywordtype}{void} DrawOuterBorder()}
+\DoxyCodeLine{00074         \{}
+\DoxyCodeLine{00075             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < Console.WindowWidth; x++)}
+\DoxyCodeLine{00076             \{}
+\DoxyCodeLine{00077                 Console.SetCursorPosition(x, 0);}
+\DoxyCodeLine{00078                 Console.Write(Horizontal);}
+\DoxyCodeLine{00079                 Console.SetCursorPosition(x, Console.WindowHeight -\/ 1);}
+\DoxyCodeLine{00080                 Console.Write(Horizontal);}
+\DoxyCodeLine{00081             \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < Console.WindowHeight; y++)}
+\DoxyCodeLine{00084             \{}
+\DoxyCodeLine{00085                 Console.SetCursorPosition(0, y);}
+\DoxyCodeLine{00086                 Console.Write(Vertical);}
+\DoxyCodeLine{00087                 Console.SetCursorPosition(Console.WindowWidth -\/ 1, y);}
+\DoxyCodeLine{00088                 Console.Write(Vertical);}
+\DoxyCodeLine{00089             \}}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091             Console.SetCursorPosition(0, 0);}
+\DoxyCodeLine{00092             Console.Write(TopLeft);}
+\DoxyCodeLine{00093             Console.SetCursorPosition(0, Console.WindowHeight -\/ 1);}
+\DoxyCodeLine{00094             Console.Write(BottomLeft);}
+\DoxyCodeLine{00095             Console.SetCursorPosition(Console.WindowWidth -\/ 1, 0);}
+\DoxyCodeLine{00096             Console.Write(TopRight);}
+\DoxyCodeLine{00097             Console.SetCursorPosition(Console.WindowWidth -\/ 1, Console.WindowHeight -\/ 1);}
+\DoxyCodeLine{00098             Console.Write(BottomRight);}
+\DoxyCodeLine{00099             Console.SetCursorPosition(1, 1);}
+\DoxyCodeLine{00100         \}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00106}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{00106}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(\textcolor{keywordtype}{string} title)}
+\DoxyCodeLine{00107         \{}
+\DoxyCodeLine{00108             ClearTitleArea();}
+\DoxyCodeLine{00109             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} position = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111             CenterString(title, \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(1, 1));}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113             Console.SetCursorPosition(0, \_contentArea[0].Y -\/ 1 -\/ Padding);}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115             \textcolor{keywordtype}{string} separator = VerticalLeft + \textcolor{keyword}{new} string(Horizontal, Console.WindowWidth -\/ 2) + VerticalRight;}
+\DoxyCodeLine{00116             Console.Write(separator);}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118             position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}{Reset}}();}
+\DoxyCodeLine{00119         \}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{keyword}{private} \textcolor{keywordtype}{void} CenterString(\textcolor{keywordtype}{string} text, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} pos)}
+\DoxyCodeLine{00122         \{}
+\DoxyCodeLine{00123             \textcolor{keywordtype}{int} x = (\_contentWidth -\/ text.Length) / 2;}
+\DoxyCodeLine{00124             Console.SetCursorPosition(x, pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00125             Console.Write(text);}
+\DoxyCodeLine{00126         \}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00135}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{00135}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{PrintMenu}}(\textcolor{keywordtype}{string} title, params \textcolor{keywordtype}{string}[] options)}
+\DoxyCodeLine{00136         \{}
+\DoxyCodeLine{00137             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00138             ClearTitleArea();}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(title);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142             \textcolor{keywordtype}{int} currentSelection = 0;}
+\DoxyCodeLine{00143             ConsoleKey key;}
+\DoxyCodeLine{00144             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00145             \{}
+\DoxyCodeLine{00146                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} position =}
+\DoxyCodeLine{00147                     \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(Console.WindowWidth -\/ \_contentWidth, Console.WindowHeight -\/ \_contentHeight);}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < options.Length; i++)}
+\DoxyCodeLine{00150                 \{}
+\DoxyCodeLine{00151                     \textcolor{keywordflow}{if} (i == currentSelection)}
+\DoxyCodeLine{00152                     \{}
+\DoxyCodeLine{00153                         Console.ForegroundColor = ConsoleColor.Red;}
+\DoxyCodeLine{00154                     \}}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156                     CenterString(options[i], position);}
+\DoxyCodeLine{00157                     position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{NextLine}}();}
+\DoxyCodeLine{00158                     Console.ResetColor();}
+\DoxyCodeLine{00159                 \}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162                 key = Console.ReadKey(\textcolor{keyword}{true}).Key;}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164                 \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{00165                 \{}
+\DoxyCodeLine{00166                     \textcolor{keywordflow}{case} ConsoleKey.DownArrow:}
+\DoxyCodeLine{00167                     \{}
+\DoxyCodeLine{00168                         \textcolor{keywordflow}{if} (currentSelection + 1 > options.Length -\/ 1)}
+\DoxyCodeLine{00169                         \{}
+\DoxyCodeLine{00170                             currentSelection = 0;}
+\DoxyCodeLine{00171                         \}}
+\DoxyCodeLine{00172                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00173                         \{}
+\DoxyCodeLine{00174                             currentSelection += 1;}
+\DoxyCodeLine{00175                         \}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178                     \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180                     \textcolor{keywordflow}{case} ConsoleKey.UpArrow:}
+\DoxyCodeLine{00181                     \{}
+\DoxyCodeLine{00182                         \textcolor{keywordflow}{if} (currentSelection -\/ 1 < 0)}
+\DoxyCodeLine{00183                         \{}
+\DoxyCodeLine{00184                             currentSelection = options.Length -\/ 1;}
+\DoxyCodeLine{00185                         \}}
+\DoxyCodeLine{00186                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00187                         \{}
+\DoxyCodeLine{00188                             currentSelection -\/= 1;}
+\DoxyCodeLine{00189                         \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00192                     \}}
+\DoxyCodeLine{00193                 \}}
+\DoxyCodeLine{00194             \} \textcolor{keywordflow}{while} (key != ConsoleKey.Enter);}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196             \textcolor{keywordflow}{return} currentSelection;}
+\DoxyCodeLine{00197         \}}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00204}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}{00204}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}{PrintActions}}(List<Action> actions)}
+\DoxyCodeLine{00205         \{}
+\DoxyCodeLine{00206             Console.SetCursorPosition(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00207             ConsoleKey key;}
+\DoxyCodeLine{00208             \textcolor{keywordtype}{int} currentSelection = 0;}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210             \textcolor{keywordtype}{int} widestAction = actions.Select(action => action.Length).Prepend(0).Max() + 2;}
+\DoxyCodeLine{00211             \textcolor{keywordtype}{int} actionsPerLine = \_actionWidth / widestAction;}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00214             \{}
+\DoxyCodeLine{00215                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{ClearActionArea}}();}
+\DoxyCodeLine{00216 }
+\DoxyCodeLine{00217                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < actions.Count; i++)}
+\DoxyCodeLine{00218                 \{}
+\DoxyCodeLine{00219                     Console.SetCursorPosition(\_actionArea[0].X + i \% actionsPerLine * widestAction,}
+\DoxyCodeLine{00220                         \_actionArea[0].Y + i / actionsPerLine);}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222                     \textcolor{keywordflow}{if} (i == currentSelection)}
+\DoxyCodeLine{00223                     \{}
+\DoxyCodeLine{00224                         Console.ForegroundColor = ConsoleColor.Cyan;}
+\DoxyCodeLine{00225                     \}}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227                     Console.Write(actions[i].Name);}
+\DoxyCodeLine{00228                     Console.ResetColor();}
+\DoxyCodeLine{00229                 \}}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231                 key = Console.ReadKey(\textcolor{keyword}{true}).Key;}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233                 \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{00234                 \{}
+\DoxyCodeLine{00235                     \textcolor{keywordflow}{case} ConsoleKey.UpArrow:}
+\DoxyCodeLine{00236                     \{}
+\DoxyCodeLine{00237                         \textcolor{keywordflow}{if} (currentSelection >= actionsPerLine)}
+\DoxyCodeLine{00238                         \{}
+\DoxyCodeLine{00239                             currentSelection -\/= actionsPerLine;}
+\DoxyCodeLine{00240                         \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00243                     \}}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245                     \textcolor{keywordflow}{case} ConsoleKey.DownArrow:}
+\DoxyCodeLine{00246                     \{}
+\DoxyCodeLine{00247                         \textcolor{keywordflow}{if} (currentSelection + actionsPerLine < actions.Count)}
+\DoxyCodeLine{00248                         \{}
+\DoxyCodeLine{00249                             currentSelection += actionsPerLine;}
+\DoxyCodeLine{00250                         \}}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253                     \}}
+\DoxyCodeLine{00254                     \textcolor{keywordflow}{case} ConsoleKey.LeftArrow:}
+\DoxyCodeLine{00255                     \{}
+\DoxyCodeLine{00256                         \textcolor{keywordflow}{if} (currentSelection \% actionsPerLine > 0)}
+\DoxyCodeLine{00257                         \{}
+\DoxyCodeLine{00258                             currentSelection-\/-\/;}
+\DoxyCodeLine{00259                         \}}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00262                     \}}
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264                     \textcolor{keywordflow}{case} ConsoleKey.RightArrow:}
+\DoxyCodeLine{00265                     \{}
+\DoxyCodeLine{00266                         \textcolor{keywordflow}{if} (currentSelection \% actionsPerLine < actionsPerLine -\/ 1)}
+\DoxyCodeLine{00267                         \{}
+\DoxyCodeLine{00268                             currentSelection++;}
+\DoxyCodeLine{00269                         \}}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00272                     \}}
+\DoxyCodeLine{00273                 \}}
+\DoxyCodeLine{00274             \} \textcolor{keywordflow}{while} (key != ConsoleKey.Enter);}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276             \textcolor{keywordflow}{return} actions[currentSelection].What;}
+\DoxyCodeLine{00277         \}}
+\DoxyCodeLine{00278 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00282}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}{00282}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}{DrawActionBorder}}()}
+\DoxyCodeLine{00283         \{}
+\DoxyCodeLine{00284             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} currentPosition = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}();}
+\DoxyCodeLine{00285             \textcolor{keywordtype}{int} x = 0;}
+\DoxyCodeLine{00286             \textcolor{keywordtype}{int} y = (Console.WindowHeight / 3) * 2;}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} left = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(x, y);}
+\DoxyCodeLine{00289             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} right = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(Console.WindowWidth -\/ 1, y);}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = x; i < Console.WindowWidth -\/ 1; i++)}
+\DoxyCodeLine{00292             \{}
+\DoxyCodeLine{00293                 Console.SetCursorPosition(i, y);}
+\DoxyCodeLine{00294                 Console.Write(Horizontal);}
+\DoxyCodeLine{00295             \}}
+\DoxyCodeLine{00296 }
+\DoxyCodeLine{00297             Console.SetCursorPosition(left.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, left.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00298             Console.Write(VerticalLeft);}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300             Console.SetCursorPosition(right.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, right.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00301             Console.Write(VerticalRight);}
+\DoxyCodeLine{00302 }
+\DoxyCodeLine{00303             currentPosition.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}{Reset}}();}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00309}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{00309}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{ClearActionArea}}()}
+\DoxyCodeLine{00310         \{}
+\DoxyCodeLine{00311             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} currentPosition = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}();}
+\DoxyCodeLine{00312             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} position = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00313             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}}; i < \_actionArea[1].Y; i++)}
+\DoxyCodeLine{00314             \{}
+\DoxyCodeLine{00315                 Console.SetCursorPosition(position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, i);}
+\DoxyCodeLine{00316                 Console.Write(\textcolor{keyword}{new} \textcolor{keywordtype}{string}(\textcolor{charliteral}{' '}, \_contentWidth));}
+\DoxyCodeLine{00317                 position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{NextLine}}();}
+\DoxyCodeLine{00318             \}}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320             Console.SetCursorPosition(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00321             currentPosition.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab6323d0bed2b41fe4f1a25de26b797e9}{Reset}}();}
+\DoxyCodeLine{00322         \}}
+\DoxyCodeLine{00323 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00327}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}{00327}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}{PrintInfo}}()}
+\DoxyCodeLine{00328         \{}
+\DoxyCodeLine{00329             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} currentPosition = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}();}
+\DoxyCodeLine{00330             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00331             CenterString(\textcolor{stringliteral}{"{}Terminal Arena"{}}, currentPosition);}
+\DoxyCodeLine{00332             currentPosition.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{NextLine}}();}
+\DoxyCodeLine{00333             CenterString(\textcolor{stringliteral}{"{}v. 1"{}}, currentPosition);}
+\DoxyCodeLine{00334             currentPosition.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{NextLine}}();}
+\DoxyCodeLine{00335             CenterString(\textcolor{stringliteral}{"{}Press enter to return to the menu"{}}, currentPosition);}
+\DoxyCodeLine{00336             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00337             \{}
+\DoxyCodeLine{00338             \} \textcolor{keywordflow}{while} (Console.ReadKey(\textcolor{keyword}{true}).Key != ConsoleKey.Enter);}
+\DoxyCodeLine{00339         \}}
+\DoxyCodeLine{00340 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00344}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{00344}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}()}
+\DoxyCodeLine{00345         \{}
+\DoxyCodeLine{00346             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} position = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0 + 1; i < \_contentArea[1].Y; i++)}
+\DoxyCodeLine{00349             \{}
+\DoxyCodeLine{00350                 Console.SetCursorPosition(position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00351                 Console.Write(\textcolor{keyword}{new} \textcolor{keywordtype}{string}(\textcolor{charliteral}{' '}, \_contentWidth));}
+\DoxyCodeLine{00352                 position.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_a7a872ea7f57bc213d025f0f6b437189c}{NextLine}}();}
+\DoxyCodeLine{00353             \}}
+\DoxyCodeLine{00354 }
+\DoxyCodeLine{00355             Console.SetCursorPosition(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00356         \}}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358         \textcolor{keyword}{private} \textcolor{keywordtype}{void} ClearTitleArea()}
+\DoxyCodeLine{00359         \{}
+\DoxyCodeLine{00360             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} pos = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}(1, 1);}
+\DoxyCodeLine{00361 }
+\DoxyCodeLine{00362             \textcolor{keywordtype}{string} clearString = \textcolor{keyword}{new} string(\textcolor{charliteral}{' '}, Console.WindowWidth -\/ 2);}
+\DoxyCodeLine{00363             Console.SetCursorPosition(pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00364             Console.Write(clearString);}
+\DoxyCodeLine{00365         \}}
+\DoxyCodeLine{00366 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00371}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}{00371}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}{Print}}(\textcolor{keywordtype}{string} message)}
+\DoxyCodeLine{00372         \{}
+\DoxyCodeLine{00373             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} pos = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}();}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375             Console.SetCursorPosition(pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00376             Console.Write(message);}
+\DoxyCodeLine{00377         \}}
+\DoxyCodeLine{00378 }
+\DoxyCodeLine{\Hypertarget{_user_interface_8cs_source_l00384}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a1b8dcc632b5da530b0a9a935892636e1}{00384}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a1b8dcc632b5da530b0a9a935892636e1}{PrintLine}}(\textcolor{keywordtype}{string} message = \textcolor{keyword}{null})}
+\DoxyCodeLine{00385         \{}
+\DoxyCodeLine{00386             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}} pos = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate}{Coordinate}}();}
+\DoxyCodeLine{00387             Console.SetCursorPosition(pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}});}
+\DoxyCodeLine{00388             Console.Write(message);}
+\DoxyCodeLine{00389             Console.SetCursorPosition(pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ab8787de7e90d04eaaf1a3cd297d61d6e}{X}}, pos.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}} + 1);}
+\DoxyCodeLine{00390         \}}
+\DoxyCodeLine{00391     \}}
+\DoxyCodeLine{00392 \}}
+
+\end{DoxyCode}

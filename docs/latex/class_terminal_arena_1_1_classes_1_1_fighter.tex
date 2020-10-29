@@ -1,0 +1,480 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_fighter}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Fighter Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_fighter}\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+
+
+Die Implementierung des I\+Entity-\/\+Interfaces. Hier wird ein Kämpfer erstellt.  
+
+
+
+
+Klassendiagramm für Terminal\+Arena.\+Classes.\+Fighter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_terminal_arena_1_1_classes_1_1_fighter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Fighter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_terminal_arena_1_1_classes_1_1_fighter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4d13d1c60cb33f40012e6f744beb8736}{Fighter}} (string name, int health, int damage, int defense)
+\begin{DoxyCompactList}\small\item\em Erstellt einen Kämpfer mit den angegebenen Attributen \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}{Attack}} (\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{I\+Entity}} enemy)
+\begin{DoxyCompactList}\small\item\em Greift den spezifizierten Gegner an \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}{Defend}} (int damage)
+\begin{DoxyCompactList}\small\item\em Versucht, sich gegen einen Angriff zu verteidigen \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{Is\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Gibt den Zustand des Kämpfers zurück \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aecd7b58f650f2304712b0786460fdd0f}{Health\+Bar}} ()
+\begin{DoxyCompactList}\small\item\em Öffentliche Methode zur Darstellung einer Gesundheitsleiste \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aec1b87c4ace3c29d80be0a5849bed459}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Liefert die Repräsentation des Fighter-\/\+Objekts als String \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a99c88f590899f6d883d66acce44fa0f4}{Do\+Action}} (string action)
+\begin{DoxyCompactList}\small\item\em Führt die gewünschte Aktion aus und aktualisiert die Aktionen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Geschützte Methoden}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}{Bar\+Graphic}} (int current, int maximum)
+\begin{DoxyCompactList}\small\item\em Erstellt aus gegenwärtiger und maximaler Resource eine Leiste Dient der grafischen Anzeige der Resource \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Gesundheit des Kämpfers \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Schaden, den der Kämpfer verursachen kann \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}{Defense}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Die Verteidigung des Kämpfers \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Name des Kämpfers \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Nachricht über ein Ereignis \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_action}{Action}} $>$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Liste von Aktionen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Die Implementierung des I\+Entity-\/\+Interfaces. Hier wird ein Kämpfer erstellt. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00014}{14}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a4d13d1c60cb33f40012e6f744beb8736}\label{class_terminal_arena_1_1_classes_1_1_fighter_a4d13d1c60cb33f40012e6f744beb8736}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Fighter@{Fighter}}
+\index{Fighter@{Fighter}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Fighter()}{Fighter()}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Fighter.\+Fighter (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{health,  }\item[{int}]{damage,  }\item[{int}]{defense }\end{DoxyParamCaption})}
+
+
+
+Erstellt einen Kämpfer mit den angegebenen Attributen 
+
+
+\begin{DoxyParams}{Parameter}
+{\em name} & Der Name des Kämpfers\\
+\hline
+{\em health} & Die Gesundheit des Kämpfers\\
+\hline
+{\em damage} & Der Schaden des Kämpfers\\
+\hline
+{\em defense} & Die Verteidigung des Kämpfers\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00074}{74}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075         \{}
+\DoxyCodeLine{00076             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}} = name;}
+\DoxyCodeLine{00077             MaxHealth = health;}
+\DoxyCodeLine{00078             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = health;}
+\DoxyCodeLine{00079             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}} = damage;}
+\DoxyCodeLine{00080             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}{Defense}} = defense;}
+\DoxyCodeLine{00081             \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}(6);}
+\DoxyCodeLine{00082             \_inventory = \textcolor{keyword}{new} Inventory();}
+\DoxyCodeLine{00083             \_inventory.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}.Add(\textcolor{keyword}{new} SmallHealthPotion());}
+\DoxyCodeLine{00084             \_inventory.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}.Add(\textcolor{keyword}{new} MediumHealthPotion());}
+\DoxyCodeLine{00085             \_inventory.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}.Add(\textcolor{keyword}{new} LargeHealthPotion());}
+\DoxyCodeLine{00086             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}{Actions}} = \textcolor{keyword}{new} List<Action>();}
+\DoxyCodeLine{00087         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}\label{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Attack@{Attack}}
+\index{Attack@{Attack}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily virtual void Terminal\+Arena.\+Classes.\+Fighter.\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{I\+Entity}}}]{enemy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Greift den spezifizierten Gegner an 
+
+
+\begin{DoxyParams}{Parameter}
+{\em enemy} & Der anzugreifende Gegner\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a37f8ce5fc2cb25e04585f64bf3177f92}{Terminal\+Arena.\+Interfaces.\+I\+Entity}}.
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00093}{93}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094         \{}
+\DoxyCodeLine{00095             \textcolor{keywordtype}{int} calculatedDamage = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}{Damage}} + \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}();}
+\DoxyCodeLine{00096             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = (\$\textcolor{stringliteral}{"{}\{Name\} verursacht \{calculatedDamage\} Schaden."{}});}
+\DoxyCodeLine{00097             enemy.\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}{Defend}}(calculatedDamage);}
+\DoxyCodeLine{00098         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}\label{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!BarGraphic@{BarGraphic}}
+\index{BarGraphic@{BarGraphic}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{BarGraphic()}{BarGraphic()}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Classes.\+Fighter.\+Bar\+Graphic (\begin{DoxyParamCaption}\item[{int}]{current,  }\item[{int}]{maximum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Erstellt aus gegenwärtiger und maximaler Resource eine Leiste Dient der grafischen Anzeige der Resource 
+
+
+\begin{DoxyParams}{Parameter}
+{\em current} & Gegenwärtige Resource\\
+\hline
+{\em maximum} & Maximale Resource\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Eine Zeichenfolge, die die Resource repräsentiert
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00142}{142}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143         \{}
+\DoxyCodeLine{00144             \textcolor{keywordtype}{string} bar = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00145             \textcolor{keywordtype}{int} total = 20;}
+\DoxyCodeLine{00146             \textcolor{keywordtype}{double} count = Math.Round(((\textcolor{keywordtype}{double}) current / maximum) * total);}
+\DoxyCodeLine{00147             \textcolor{keywordflow}{if} (count == 0 \&\& \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}())}
+\DoxyCodeLine{00148             \{}
+\DoxyCodeLine{00149                 count = 1;}
+\DoxyCodeLine{00150             \}}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < count; i++)}
+\DoxyCodeLine{00153             \{}
+\DoxyCodeLine{00154                 bar += \textcolor{stringliteral}{"{}█"{}};}
+\DoxyCodeLine{00155             \}}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157             \textcolor{keywordflow}{return} bar.PadRight(total);}
+\DoxyCodeLine{00158         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}\label{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Defend@{Defend}}
+\index{Defend@{Defend}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Defend()}{Defend()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Fighter.\+Defend (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Versucht, sich gegen einen Angriff zu verteidigen 
+
+
+\begin{DoxyParams}{Parameter}
+{\em damage} & Zu verursachender Schaden\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}{Terminal\+Arena.\+Interfaces.\+I\+Entity}}.
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00104}{104}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105         \{}
+\DoxyCodeLine{00106             \textcolor{keywordtype}{string} message;}
+\DoxyCodeLine{00107             \textcolor{keywordtype}{int} damageTaken = damage -\/ \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}();}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{if} (damageTaken > 0)}
+\DoxyCodeLine{00109             \{}
+\DoxyCodeLine{00110                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} -\/= damageTaken;}
+\DoxyCodeLine{00111                 message = \$\textcolor{stringliteral}{"{}\{Name\} hat \{damageTaken\} Punkte Schaden genommen"{}};}
+\DoxyCodeLine{00112                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} <= 0)}
+\DoxyCodeLine{00113                 \{}
+\DoxyCodeLine{00114                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = 0;}
+\DoxyCodeLine{00115                     message += \textcolor{stringliteral}{"{} und ist gestorben"{}};}
+\DoxyCodeLine{00116                 \}}
+\DoxyCodeLine{00117             \}}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00119             \{}
+\DoxyCodeLine{00120                 message = \$\textcolor{stringliteral}{"{}\{Name\} hat den Schaden geblockt"{}};}
+\DoxyCodeLine{00121             \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = message;}
+\DoxyCodeLine{00124         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a99c88f590899f6d883d66acce44fa0f4}\label{class_terminal_arena_1_1_classes_1_1_fighter_a99c88f590899f6d883d66acce44fa0f4}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!DoAction@{DoAction}}
+\index{DoAction@{DoAction}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{DoAction()}{DoAction()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Fighter.\+Do\+Action (\begin{DoxyParamCaption}\item[{string}]{action }\end{DoxyParamCaption})}
+
+
+
+Führt die gewünschte Aktion aus und aktualisiert die Aktionen 
+
+
+\begin{DoxyParams}{Parameter}
+{\em action} & Die gewünschte Aktion\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00183}{183}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184         \{}
+\DoxyCodeLine{00185             \textcolor{keywordflow}{switch} (action)}
+\DoxyCodeLine{00186             \{}
+\DoxyCodeLine{00187                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}potion"{}}:}
+\DoxyCodeLine{00188                 \{}
+\DoxyCodeLine{00189                     UsePotion();}
+\DoxyCodeLine{00190                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00191                 \}}
+\DoxyCodeLine{00192                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}attack"{}}:}
+\DoxyCodeLine{00193                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}flee"{}}:}
+\DoxyCodeLine{00195                 \{}
+\DoxyCodeLine{00196                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} = 0;}
+\DoxyCodeLine{00197                     \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}{Message}} = \$\textcolor{stringliteral}{"{}\{Name\} hat aufgegeben."{}};}
+\DoxyCodeLine{00198                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00199                 \}}
+\DoxyCodeLine{00200             \}}
+\DoxyCodeLine{00201         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_aecd7b58f650f2304712b0786460fdd0f}\label{class_terminal_arena_1_1_classes_1_1_fighter_aecd7b58f650f2304712b0786460fdd0f}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!HealthBar@{HealthBar}}
+\index{HealthBar@{HealthBar}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{HealthBar()}{HealthBar()}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Classes.\+Fighter.\+Health\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Öffentliche Methode zur Darstellung einer Gesundheitsleiste 
+
+\begin{DoxyReturn}{Rückgabe}
+Eine Zeichenfolge, die die Gesundheit repräsentiert
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00164}{164}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00165         \{}
+\DoxyCodeLine{00166             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}["{}} + \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a018348013488133b0308f54a32651542}{BarGraphic}}(\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}}, MaxHealth).Pastel(Color.Red).PastelBg(Color.DarkRed) +}
+\DoxyCodeLine{00167                    \$\textcolor{stringliteral}{"{}] \{Health\} / \{MaxHealth\}"{}};}
+\DoxyCodeLine{00168         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}\label{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool Terminal\+Arena.\+Classes.\+Fighter.\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gibt den Zustand des Kämpfers zurück 
+
+\begin{DoxyReturn}{Rückgabe}
+Lebendig ja/nein
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00130}{130}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131         \{}
+\DoxyCodeLine{00132             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}{Health}} > 0;}
+\DoxyCodeLine{00133         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_aec1b87c4ace3c29d80be0a5849bed459}\label{class_terminal_arena_1_1_classes_1_1_fighter_aec1b87c4ace3c29d80be0a5849bed459}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!ToString@{ToString}}
+\index{ToString@{ToString}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Terminal\+Arena.\+Classes.\+Fighter.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Liefert die Repräsentation des Fighter-\/\+Objekts als String 
+
+\begin{DoxyReturn}{Rückgabe}
+(string) Fighter-\/\+Objekt
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00174}{174}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175         \{}
+\DoxyCodeLine{00176             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}};}
+\DoxyCodeLine{00177         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}\label{class_terminal_arena_1_1_classes_1_1_fighter_a2b308ef56fc5abbdd0eb0246a7ca9f97}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Actions@{Actions}}
+\index{Actions@{Actions}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Actions}{Actions}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_action}{Action}}$>$ Terminal\+Arena.\+Classes.\+Fighter.\+Actions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Eine Liste von Aktionen 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00061}{61}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}\label{class_terminal_arena_1_1_classes_1_1_fighter_a3629686b99b2ae99d4e341b3fb46b086}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Damage@{Damage}}
+\index{Damage@{Damage}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Damage}{Damage}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Fighter.\+Damage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Schaden, den der Kämpfer verursachen kann 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00026}{26}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}\label{class_terminal_arena_1_1_classes_1_1_fighter_a28ea17903bbd8be7f7d535e375962271}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Defense@{Defense}}
+\index{Defense@{Defense}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Defense}{Defense}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Fighter.\+Defense\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Verteidigung des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00031}{31}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}\label{class_terminal_arena_1_1_classes_1_1_fighter_a6a642a582a325717f76c022699dd50a7}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Health@{Health}}
+\index{Health@{Health}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Health}{Health}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Fighter.\+Health\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Die Gesundheit des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00021}{21}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}\label{class_terminal_arena_1_1_classes_1_1_fighter_af992ea1023215074f5b1d1ccd9060dd9}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Message@{Message}}
+\index{Message@{Message}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Message}{Message}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Classes.\+Fighter.\+Message\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Eine Nachricht über ein Ereignis 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00046}{46}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}\label{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}} 
+\index{TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}!Name@{Name}}
+\index{Name@{Name}!TerminalArena.Classes.Fighter@{TerminalArena.Classes.Fighter}}
+\doxyparagraph{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Classes.\+Fighter.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Name des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fighter_8cs_source_l00041}{41}} der Datei \mbox{\hyperlink{_fighter_8cs_source}{Fighter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Fighter.\+cs\end{DoxyCompactItemize}

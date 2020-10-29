@@ -1,0 +1,43 @@
+\hypertarget{_dice_8cs_source}{}\doxysubsection{Dice.\+cs}
+\label{_dice_8cs_source}\index{Dice.cs@{Dice.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00003}\mbox{\hyperlink{namespace_terminal_arena_1_1_helpers}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena_1_1_helpers}{TerminalArena.Helpers}}}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00008}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{00008}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}}
+\DoxyCodeLine{00009     \{}
+\DoxyCodeLine{00010         \textcolor{keyword}{private} readonly Random \_random;}
+\DoxyCodeLine{00011         \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} \_sides;}
+\DoxyCodeLine{00012         }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00017}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aafd876ab92792c45c90ee1625b317bd0}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aafd876ab92792c45c90ee1625b317bd0}{Dice}}(\textcolor{keywordtype}{int} sides)}
+\DoxyCodeLine{00018         \{}
+\DoxyCodeLine{00019             \_sides = sides;}
+\DoxyCodeLine{00020             \_random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00021         \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00026}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aa7577903ad6d46d8e171e053ed6a732b}{00026}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_aa7577903ad6d46d8e171e053ed6a732b}{Dice}}()}
+\DoxyCodeLine{00027         \{}
+\DoxyCodeLine{00028             \_sides = 6;}
+\DoxyCodeLine{00029             \_random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00030         \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00036}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}()}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{return} \_random.Next(1, \_sides + 1);}
+\DoxyCodeLine{00039         \}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00045}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}{00045}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}{GetSides}}()}
+\DoxyCodeLine{00046         \{}
+\DoxyCodeLine{00047             \textcolor{keywordflow}{return} \_sides;}
+\DoxyCodeLine{00048         \}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{\Hypertarget{_dice_8cs_source_l00054}\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_abd03e6e6678473420197b021b6d11ad9}{00054}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_abd03e6e6678473420197b021b6d11ad9}{ToString}}()}
+\DoxyCodeLine{00055         \{}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{return} \$\textcolor{stringliteral}{"{}Würfele mit einem \{\_sides\}-\/seitigen Würfel"{}};}
+\DoxyCodeLine{00057         \}}
+\DoxyCodeLine{00058     \}}
+\DoxyCodeLine{00059 \}}
+
+\end{DoxyCode}

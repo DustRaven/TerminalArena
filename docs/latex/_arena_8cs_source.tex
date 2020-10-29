@@ -1,0 +1,87 @@
+\hypertarget{_arena_8cs_source}{}\doxysubsection{Arena.\+cs}
+\label{_arena_8cs_source}\index{Arena.cs@{Arena.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena_1_1_classes}{TerminalArena.Classes}}}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{\Hypertarget{_arena_8cs_source_l00010}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}}}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{\Hypertarget{_arena_8cs_source_l00015}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{00015}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{UserInterface}} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{00016         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{int} MaxFighters = 10;}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018         \textcolor{keyword}{private} List<Fighter> \_enemies;}
+\DoxyCodeLine{00019         \textcolor{keyword}{private} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}} \_player;}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{\Hypertarget{_arena_8cs_source_l00024}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a45bb8fb09278067dc74bd962b183d695}{00024}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a45bb8fb09278067dc74bd962b183d695}{Arena}}()}
+\DoxyCodeLine{00025         \{}
+\DoxyCodeLine{00026             GenerateEnemies();}
+\DoxyCodeLine{00027             SetupPlayer();}
+\DoxyCodeLine{00028         \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{_arena_8cs_source_l00033}\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}{00033}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}{StartFight}}()}
+\DoxyCodeLine{00034         \{}
+\DoxyCodeLine{00035             var choice = 0;}
+\DoxyCodeLine{00036             \textcolor{keywordflow}{while} (\_player.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}() \&\& choice == 0)}
+\DoxyCodeLine{00037             \{}
+\DoxyCodeLine{00038                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}{DrawActionBorder}}();}
+\DoxyCodeLine{00039                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{ClearActionArea}}();}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fight}{Fight}} fight = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fight}{Fight}}(\_enemies.First(), \_player, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}});}
+\DoxyCodeLine{00042                 fight.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fight_a6865e9c513dede111bc53248f18a3203}{DoFight}}();}
+\DoxyCodeLine{00043                 }
+\DoxyCodeLine{00044                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00045                 choice = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{PrintMenu}}(\textcolor{stringliteral}{"{}Nächste Runde?"{}}, \textcolor{stringliteral}{"{}Nächste Runde"{}}, \textcolor{stringliteral}{"{}Beenden"{}});}
+\DoxyCodeLine{00046                 \textcolor{keywordflow}{if} (choice == 1 || !\_player.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}())}
+\DoxyCodeLine{00047                 \{}
+\DoxyCodeLine{00048                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00049                 \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051                 \_enemies.Remove(\_enemies.First());}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053         \}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00058         \textcolor{keyword}{private} \textcolor{keywordtype}{void} GenerateEnemies()}
+\DoxyCodeLine{00059         \{}
+\DoxyCodeLine{00060             \_enemies = \textcolor{keyword}{new} List<Fighter>();}
+\DoxyCodeLine{00061             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < MaxFighters; i++)}
+\DoxyCodeLine{00062             \{}
+\DoxyCodeLine{00063                 \textcolor{keywordtype}{string} name = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_helper}{Helper}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_helper_a46e7540b71336db6ea7dc6f0816f764e}{GetRandomName}}();}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065                 \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}} fighter \textcolor{keywordflow}{in} \_enemies)}
+\DoxyCodeLine{00066                 \{}
+\DoxyCodeLine{00067                     \textcolor{keywordflow}{if} (fighter.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_aeddc27c94b7d4eb0adfddd9af557ec86}{Name}} == name)}
+\DoxyCodeLine{00068                     \{}
+\DoxyCodeLine{00069                         name = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_helper}{Helper}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_helper_a46e7540b71336db6ea7dc6f0816f764e}{GetRandomName}}();}
+\DoxyCodeLine{00070                     \}}
+\DoxyCodeLine{00071                 \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073                 Fighter enemy = \textcolor{keyword}{new} Fighter(name, 50, 1, 5);}
+\DoxyCodeLine{00074                 \_enemies.Add(enemy);}
+\DoxyCodeLine{00075             \}}
+\DoxyCodeLine{00076         \}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00081         \textcolor{keyword}{private} \textcolor{keywordtype}{void} SetupPlayer()}
+\DoxyCodeLine{00082         \{}
+\DoxyCodeLine{00083             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(\textcolor{stringliteral}{"{}Kämpfer erstellen"{}});}
+\DoxyCodeLine{00084             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00085             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}{Print}}(\textcolor{stringliteral}{"{}Gib deinem Kämpfer einen Namen: "{}});}
+\DoxyCodeLine{00086             \textcolor{keywordtype}{string} name = Console.ReadLine();}
+\DoxyCodeLine{00087             \_player = \textcolor{keyword}{new} Fighter(name, 100, 3, 10)}
+\DoxyCodeLine{00088             \{}
+\DoxyCodeLine{00089                 Actions = \textcolor{keyword}{new} List<Action>}
+\DoxyCodeLine{00090                 \{}
+\DoxyCodeLine{00091                     \textcolor{keyword}{new} Action(\textcolor{stringliteral}{"{}Trank benutzen"{}}, \textcolor{stringliteral}{"{}potion"{}}),}
+\DoxyCodeLine{00092                     \textcolor{keyword}{new} Action(\textcolor{stringliteral}{"{}Angreifen"{}}, \textcolor{stringliteral}{"{}attack"{}}),}
+\DoxyCodeLine{00093                     \textcolor{keyword}{new} Action(\textcolor{stringliteral}{"{}Weglaufen"{}}, \textcolor{stringliteral}{"{}flee"{}})}
+\DoxyCodeLine{00094                 \}}
+\DoxyCodeLine{00095             \};}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097         \}}
+\DoxyCodeLine{00098     \}}
+\DoxyCodeLine{00099 \}}
+
+\end{DoxyCode}

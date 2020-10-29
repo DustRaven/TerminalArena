@@ -1,0 +1,200 @@
+\hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{}\doxysubsection{Terminal\+Arena.\+Interfaces.\+I\+Entity Schnittstellenreferenz}
+\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity}\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+
+
+Interface für die Kämpferklasse. Eigenschaften und Methoden, die für alle Kämpfer identisch sein sollen.  
+
+
+
+
+Klassendiagramm für Terminal\+Arena.\+Interfaces.\+I\+Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{interface_terminal_arena_1_1_interfaces_1_1_i_entity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Interfaces.\+I\+Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{interface_terminal_arena_1_1_interfaces_1_1_i_entity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a37f8ce5fc2cb25e04585f64bf3177f92}{Attack}} (\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{I\+Entity}} enemy)
+\begin{DoxyCompactList}\small\item\em Greift ein Ziel an. Der Schaden und der Verteidigungswert des Gegners werden berechnet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}{Defend}} (int damage)
+\begin{DoxyCompactList}\small\item\em Verteidigung gegen einen Angriff. Hier wird entschieden, ob und wie viel Schaden verursacht wird. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a14de8263d2a82019fbc62f1533ec2f61}{Health}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gesundheit des Kämpfers \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a366e08e434946326cb27f5a7cced53b9}{Damage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Schadenswert des Kämpfers \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a78e1ee5a2a3c04cd1e717796efeb7225}{Defense}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Verteidigungswert des Kämpfers \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_abbe89dbf4270678e8816c23b55c77471}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Der Name des Kämpfers \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a252e9ce143fe31e3b973566c47de48a5}{Message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Nachricht über Ereignisse \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Interface für die Kämpferklasse. Eigenschaften und Methoden, die für alle Kämpfer identisch sein sollen. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00007}{7}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a37f8ce5fc2cb25e04585f64bf3177f92}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a37f8ce5fc2cb25e04585f64bf3177f92}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Attack@{Attack}}
+\index{Attack@{Attack}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_entity}{I\+Entity}}}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Greift ein Ziel an. Der Schaden und der Verteidigungswert des Gegners werden berechnet. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em enemy} & Der anzugreifende Gegner\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a4aac9a69dccd199fb602e827f7845cc8}{Terminal\+Arena.\+Classes.\+Fighter}}.
+
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a9906c8a720c9f990b53c7f54dffc6eb2}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Defend@{Defend}}
+\index{Defend@{Defend}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Defend()}{Defend()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Defend (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Verteidigung gegen einen Angriff. Hier wird entschieden, ob und wie viel Schaden verursacht wird. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em damage} & Der Schaden, der verursacht werden soll\\
+\hline
+\end{DoxyParams}
+
+
+Implementiert in \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3c4b4b763b971beb8cf4be8883062a1b}{Terminal\+Arena.\+Classes.\+Fighter}}.
+
+
+
+\doxysubsubsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a366e08e434946326cb27f5a7cced53b9}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a366e08e434946326cb27f5a7cced53b9}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Damage@{Damage}}
+\index{Damage@{Damage}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Damage}{Damage}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Damage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Schadenswert des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00017}{17}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a78e1ee5a2a3c04cd1e717796efeb7225}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a78e1ee5a2a3c04cd1e717796efeb7225}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Defense@{Defense}}
+\index{Defense@{Defense}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Defense}{Defense}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Defense\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Verteidigungswert des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00022}{22}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a14de8263d2a82019fbc62f1533ec2f61}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a14de8263d2a82019fbc62f1533ec2f61}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Health@{Health}}
+\index{Health@{Health}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Health}{Health}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Health\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gesundheit des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00012}{12}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a252e9ce143fe31e3b973566c47de48a5}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_a252e9ce143fe31e3b973566c47de48a5}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Message@{Message}}
+\index{Message@{Message}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Message}{Message}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Message\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Eine Nachricht über Ereignisse 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00032}{32}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_terminal_arena_1_1_interfaces_1_1_i_entity_abbe89dbf4270678e8816c23b55c77471}\label{interface_terminal_arena_1_1_interfaces_1_1_i_entity_abbe89dbf4270678e8816c23b55c77471}} 
+\index{TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}!Name@{Name}}
+\index{Name@{Name}!TerminalArena.Interfaces.IEntity@{TerminalArena.Interfaces.IEntity}}
+\doxyparagraph{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Interfaces.\+I\+Entity.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Der Name des Kämpfers 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_i_entity_8cs_source_l00027}{27}} der Datei \mbox{\hyperlink{_i_entity_8cs_source}{I\+Entity.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Schnittstelle wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+I\+Entity.\+cs\end{DoxyCompactItemize}

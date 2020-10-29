@@ -1,0 +1,156 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_inventory}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Inventory Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_inventory}\index{TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}}
+
+
+Repräsentiert das Inventar eines Kämpfers.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Inventory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_terminal_arena_1_1_classes_1_1_inventory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_ab931beaa54e77c0505c501c695e80a7a}{Inventory}} (int capacity=10)
+\begin{DoxyCompactList}\small\item\em Initialisiert ein Inventar mit einer Größe von 10 (falls nicht anders angegeben) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a32c2347e3e36c1c72259cde7fd83a729}{Contains}} (Type item\+Type)
+\begin{DoxyCompactList}\small\item\em Prüft, ob im Inventar ein Gegenstand des gesuchten Typs existiert, und gibt das Ergebnis zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a9c0d56ec2857f13bdd4cbdd9f85b606b}{Capacity}} =$>$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}?.Count ?? 0
+\begin{DoxyCompactList}\small\item\em Die Kapazität des Inventars. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_item}{I\+Item}} $>$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eine Liste von Gegenständen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Repräsentiert das Inventar eines Kämpfers. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_inventory_8cs_source_l00010}{10}} der Datei \mbox{\hyperlink{_inventory_8cs_source}{Inventory.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_inventory_ab931beaa54e77c0505c501c695e80a7a}\label{class_terminal_arena_1_1_classes_1_1_inventory_ab931beaa54e77c0505c501c695e80a7a}} 
+\index{TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}}
+\doxyparagraph{\texorpdfstring{Inventory()}{Inventory()}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Inventory.\+Inventory (\begin{DoxyParamCaption}\item[{int}]{capacity = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Initialisiert ein Inventar mit einer Größe von 10 (falls nicht anders angegeben) 
+
+
+\begin{DoxyParams}{Parameter}
+{\em capacity} & Die Kapazität des Inventars\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_inventory_8cs_source_l00026}{26}} der Datei \mbox{\hyperlink{_inventory_8cs_source}{Inventory.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027         \{}
+\DoxyCodeLine{00028             SetInventoryCapacity(capacity);}
+\DoxyCodeLine{00029         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_inventory_a32c2347e3e36c1c72259cde7fd83a729}\label{class_terminal_arena_1_1_classes_1_1_inventory_a32c2347e3e36c1c72259cde7fd83a729}} 
+\index{TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}!Contains@{Contains}}
+\index{Contains@{Contains}!TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}}
+\doxyparagraph{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool Terminal\+Arena.\+Classes.\+Inventory.\+Contains (\begin{DoxyParamCaption}\item[{Type}]{item\+Type }\end{DoxyParamCaption})}
+
+
+
+Prüft, ob im Inventar ein Gegenstand des gesuchten Typs existiert, und gibt das Ergebnis zurück. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em item\+Type} & Der Typ des Gegenstands\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Wahr oder Falsch
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_inventory_8cs_source_l00036}{36}} der Datei \mbox{\hyperlink{_inventory_8cs_source}{Inventory.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_item}{IItem}} item \textcolor{keywordflow}{in} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}})}
+\DoxyCodeLine{00039             \{}
+\DoxyCodeLine{00040                 \textcolor{keywordflow}{if} (item.GetType() == itemType)}
+\DoxyCodeLine{00041                 \{}
+\DoxyCodeLine{00042                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00043                 \}}
+\DoxyCodeLine{00044             \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00047         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_inventory_a9c0d56ec2857f13bdd4cbdd9f85b606b}\label{class_terminal_arena_1_1_classes_1_1_inventory_a9c0d56ec2857f13bdd4cbdd9f85b606b}} 
+\index{TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}}
+\doxyparagraph{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+Inventory.\+Capacity =$>$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}{Items}}?.Count ?? 0}
+
+
+
+Die Kapazität des Inventars. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_inventory_8cs_source_l00020}{20}} der Datei \mbox{\hyperlink{_inventory_8cs_source}{Inventory.\+cs}}.
+
+
+
+\doxysubsubsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}\label{class_terminal_arena_1_1_classes_1_1_inventory_a1e3e2f6a59427c49c0d3710f0b23224b}} 
+\index{TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}!Items@{Items}}
+\index{Items@{Items}!TerminalArena.Classes.Inventory@{TerminalArena.Classes.Inventory}}
+\doxyparagraph{\texorpdfstring{Items}{Items}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{interface_terminal_arena_1_1_interfaces_1_1_i_item}{I\+Item}}$>$ Terminal\+Arena.\+Classes.\+Inventory.\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Eine Liste von Gegenständen. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_inventory_8cs_source_l00015}{15}} der Datei \mbox{\hyperlink{_inventory_8cs_source}{Inventory.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Inventory.\+cs\end{DoxyCompactItemize}

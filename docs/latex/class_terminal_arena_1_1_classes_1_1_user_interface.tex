@@ -1,0 +1,521 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface}{}\doxysubsection{Terminal\+Arena.\+Classes.\+User\+Interface Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_user_interface}\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+
+
+Klasse für das User Interface. Hier sind alle Methoden enthalten, die das Interface darstellen.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+User\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_terminal_arena_1_1_classes_1_1_user_interface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0d9b3bfed2d941a1e48850206628ffae}{User\+Interface}} (string title)
+\begin{DoxyCompactList}\small\item\em Löscht die Inhalte der Konsole, legt globale Eigenschaften fest und zeichnet Rahmen und Titel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{Draw\+Title}} (string title)
+\begin{DoxyCompactList}\small\item\em Schreibt den Titel des Fensters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{Print\+Menu}} (string title, params string\mbox{[}$\,$\mbox{]} options)
+\begin{DoxyCompactList}\small\item\em Zeigt ein Menü mit den gegebenen Optionen an. Gibt den Index der gewählten Option zurück. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}{Print\+Actions}} (List$<$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_action}{Action}} $>$ actions)
+\begin{DoxyCompactList}\small\item\em Gibt eine Liste von Aktionen als Menü aus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}{Draw\+Action\+Border}} ()
+\begin{DoxyCompactList}\small\item\em Zeichnet den Rand des Aktionsfeldes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{Clear\+Action\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Löscht den Inhalt des Aktionsbereiches \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}{Print\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Zeigt eine Information über das Programm an. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{Clear\+Content\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Löscht den Inhaltsteil des Fensters (alles unterhalb des Titels und innerhalb der Rahmen). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}{Print}} (string message)
+\begin{DoxyCompactList}\small\item\em Gibt eine Zeichenfolge im Inhaltsbereich aus, ohne in die nächste Zeile zu springen (Wie Console.\+Write). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a1b8dcc632b5da530b0a9a935892636e1}{Print\+Line}} (string message=null)
+\begin{DoxyCompactList}\small\item\em Gibt eine Zeichenfolge im Inhaltsbereich aus und springt in die nächste Zeile (wie Console.\+Write\+Line). Ohne Zeichenfolge wird der Cursor nur in die nächste Zeile gesetzt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Klasse für das User Interface. Hier sind alle Methoden enthalten, die das Interface darstellen. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00010}{10}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a0d9b3bfed2d941a1e48850206628ffae}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a0d9b3bfed2d941a1e48850206628ffae}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!UserInterface@{UserInterface}}
+\index{UserInterface@{UserInterface}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{UserInterface()}{UserInterface()}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+User\+Interface.\+User\+Interface (\begin{DoxyParamCaption}\item[{string}]{title }\end{DoxyParamCaption})}
+
+
+
+Löscht die Inhalte der Konsole, legt globale Eigenschaften fest und zeichnet Rahmen und Titel. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00037}{37}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038         \{}
+\DoxyCodeLine{00039             Console.Clear();}
+\DoxyCodeLine{00040             SetupConsole();}
+\DoxyCodeLine{00041             DrawOuterBorder();}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043             \_contentHeight =}
+\DoxyCodeLine{00044                 (Console.WindowHeight / 3) * 2 -\/ TitleHeight -\/ Padding -\/}
+\DoxyCodeLine{00045                 2; \textcolor{comment}{// Fensterhöhe / 3 * 2 -\/ Titel + Trenner -\/ Abstand oben \& unten -\/ Rahmen oben \& unten}}
+\DoxyCodeLine{00046             \_contentWidth =}
+\DoxyCodeLine{00047                 Console.WindowWidth -\/ 2 -\/ 2 * Padding; \textcolor{comment}{// Fensterbreite -\/ Rahmen links \& rechts -\/ Abstand links \& rechts}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049             \_contentArea = \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00050             \{}
+\DoxyCodeLine{00051                 \textcolor{keyword}{new} Coordinate(1 + Padding, TitleHeight + Padding + 1), \textcolor{comment}{// Inhaltsfläche links oben}}
+\DoxyCodeLine{00052                 \textcolor{keyword}{new} Coordinate(\_contentWidth, \_contentHeight) \textcolor{comment}{// Inhaltsfläche rechts unten}}
+\DoxyCodeLine{00053             \};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056             \_actionHeight = Console.WindowHeight -\/ \_contentHeight -\/ Padding * 2 -\/ 2 -\/ TitleHeight;}
+\DoxyCodeLine{00057             \_actionWidth = \_contentWidth;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059             \_actionArea = \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00060             \{}
+\DoxyCodeLine{00061                 \textcolor{keyword}{new} Coordinate(1 + Padding, Console.WindowHeight -\/ \_actionHeight + Padding),}
+\DoxyCodeLine{00062                 \textcolor{keyword}{new} Coordinate(Console.WindowWidth -\/ 1 -\/ Padding, Console.WindowHeight -\/ 1 -\/ Padding)}
+\DoxyCodeLine{00063             \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(title);}
+\DoxyCodeLine{00066         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!ClearActionArea@{ClearActionArea}}
+\index{ClearActionArea@{ClearActionArea}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{ClearActionArea()}{ClearActionArea()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Clear\+Action\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Löscht den Inhalt des Aktionsbereiches 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00309}{309}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00310         \{}
+\DoxyCodeLine{00311             Coordinate currentPosition = \textcolor{keyword}{new} Coordinate();}
+\DoxyCodeLine{00312             Coordinate position = \textcolor{keyword}{new} Coordinate(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00313             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = position.Y; i < \_actionArea[1].Y; i++)}
+\DoxyCodeLine{00314             \{}
+\DoxyCodeLine{00315                 Console.SetCursorPosition(position.X, i);}
+\DoxyCodeLine{00316                 Console.Write(\textcolor{keyword}{new} \textcolor{keywordtype}{string}(\textcolor{charliteral}{' '}, \_contentWidth));}
+\DoxyCodeLine{00317                 position.NextLine();}
+\DoxyCodeLine{00318             \}}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320             Console.SetCursorPosition(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00321             currentPosition.Reset();}
+\DoxyCodeLine{00322         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}\label{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!ClearContentArea@{ClearContentArea}}
+\index{ClearContentArea@{ClearContentArea}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{ClearContentArea()}{ClearContentArea()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Clear\+Content\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Löscht den Inhaltsteil des Fensters (alles unterhalb des Titels und innerhalb der Rahmen). 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00344}{344}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00345         \{}
+\DoxyCodeLine{00346             Coordinate position = \textcolor{keyword}{new} Coordinate(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0 + 1; i < \_contentArea[1].\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_coordinate_ac375d78e3bc50878b69b2969fdd6f9c4}{Y}}; i++)}
+\DoxyCodeLine{00349             \{}
+\DoxyCodeLine{00350                 Console.SetCursorPosition(position.X, position.Y);}
+\DoxyCodeLine{00351                 Console.Write(\textcolor{keyword}{new} \textcolor{keywordtype}{string}(\textcolor{charliteral}{' '}, \_contentWidth));}
+\DoxyCodeLine{00352                 position.NextLine();}
+\DoxyCodeLine{00353             \}}
+\DoxyCodeLine{00354 }
+\DoxyCodeLine{00355             Console.SetCursorPosition(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00356         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!DrawActionBorder@{DrawActionBorder}}
+\index{DrawActionBorder@{DrawActionBorder}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{DrawActionBorder()}{DrawActionBorder()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Draw\+Action\+Border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zeichnet den Rand des Aktionsfeldes 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00282}{282}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283         \{}
+\DoxyCodeLine{00284             Coordinate currentPosition = \textcolor{keyword}{new} Coordinate();}
+\DoxyCodeLine{00285             \textcolor{keywordtype}{int} x = 0;}
+\DoxyCodeLine{00286             \textcolor{keywordtype}{int} y = (Console.WindowHeight / 3) * 2;}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288             Coordinate left = \textcolor{keyword}{new} Coordinate(x, y);}
+\DoxyCodeLine{00289             Coordinate right = \textcolor{keyword}{new} Coordinate(Console.WindowWidth -\/ 1, y);}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = x; i < Console.WindowWidth -\/ 1; i++)}
+\DoxyCodeLine{00292             \{}
+\DoxyCodeLine{00293                 Console.SetCursorPosition(i, y);}
+\DoxyCodeLine{00294                 Console.Write(Horizontal);}
+\DoxyCodeLine{00295             \}}
+\DoxyCodeLine{00296 }
+\DoxyCodeLine{00297             Console.SetCursorPosition(left.X, left.Y);}
+\DoxyCodeLine{00298             Console.Write(VerticalLeft);}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300             Console.SetCursorPosition(right.X, right.Y);}
+\DoxyCodeLine{00301             Console.Write(VerticalRight);}
+\DoxyCodeLine{00302 }
+\DoxyCodeLine{00303             currentPosition.Reset();}
+\DoxyCodeLine{00304         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!DrawTitle@{DrawTitle}}
+\index{DrawTitle@{DrawTitle}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{DrawTitle()}{DrawTitle()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Draw\+Title (\begin{DoxyParamCaption}\item[{string}]{title }\end{DoxyParamCaption})}
+
+
+
+Schreibt den Titel des Fensters. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em title} & Der Titel\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00106}{106}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107         \{}
+\DoxyCodeLine{00108             ClearTitleArea();}
+\DoxyCodeLine{00109             Coordinate position = \textcolor{keyword}{new} Coordinate(\_contentArea[0].X, \_contentArea[0].Y);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111             CenterString(title, \textcolor{keyword}{new} Coordinate(1, 1));}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113             Console.SetCursorPosition(0, \_contentArea[0].Y -\/ 1 -\/ Padding);}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115             \textcolor{keywordtype}{string} separator = VerticalLeft + \textcolor{keyword}{new} string(Horizontal, Console.WindowWidth -\/ 2) + VerticalRight;}
+\DoxyCodeLine{00116             Console.Write(separator);}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118             position.Reset();}
+\DoxyCodeLine{00119         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}\label{class_terminal_arena_1_1_classes_1_1_user_interface_ac3061bb1f92038d76df8bbef09e91c05}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!Print@{Print}}
+\index{Print@{Print}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Print (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})}
+
+
+
+Gibt eine Zeichenfolge im Inhaltsbereich aus, ohne in die nächste Zeile zu springen (Wie Console.\+Write). 
+
+
+\begin{DoxyParams}{Parameter}
+{\em message} & Zeichenfolge\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00371}{371}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00372         \{}
+\DoxyCodeLine{00373             Coordinate pos = \textcolor{keyword}{new} Coordinate();}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375             Console.SetCursorPosition(pos.X, pos.Y);}
+\DoxyCodeLine{00376             Console.Write(message);}
+\DoxyCodeLine{00377         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}\label{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!PrintActions@{PrintActions}}
+\index{PrintActions@{PrintActions}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{PrintActions()}{PrintActions()}}
+{\footnotesize\ttfamily string Terminal\+Arena.\+Classes.\+User\+Interface.\+Print\+Actions (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_action}{Action}} $>$}]{actions }\end{DoxyParamCaption})}
+
+
+
+Gibt eine Liste von Aktionen als Menü aus. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em actions} & Eine Liste von Aktionen\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Die gewählte Aktion
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00204}{204}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205         \{}
+\DoxyCodeLine{00206             Console.SetCursorPosition(\_actionArea[0].X, \_actionArea[0].Y);}
+\DoxyCodeLine{00207             ConsoleKey key;}
+\DoxyCodeLine{00208             \textcolor{keywordtype}{int} currentSelection = 0;}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210             \textcolor{keywordtype}{int} widestAction = actions.Select(action => action.Length).Prepend(0).Max() + 2;}
+\DoxyCodeLine{00211             \textcolor{keywordtype}{int} actionsPerLine = \_actionWidth / widestAction;}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00214             \{}
+\DoxyCodeLine{00215                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{ClearActionArea}}();}
+\DoxyCodeLine{00216 }
+\DoxyCodeLine{00217                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < actions.Count; i++)}
+\DoxyCodeLine{00218                 \{}
+\DoxyCodeLine{00219                     Console.SetCursorPosition(\_actionArea[0].X + i \% actionsPerLine * widestAction,}
+\DoxyCodeLine{00220                         \_actionArea[0].Y + i / actionsPerLine);}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222                     \textcolor{keywordflow}{if} (i == currentSelection)}
+\DoxyCodeLine{00223                     \{}
+\DoxyCodeLine{00224                         Console.ForegroundColor = ConsoleColor.Cyan;}
+\DoxyCodeLine{00225                     \}}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227                     Console.Write(actions[i].Name);}
+\DoxyCodeLine{00228                     Console.ResetColor();}
+\DoxyCodeLine{00229                 \}}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231                 key = Console.ReadKey(\textcolor{keyword}{true}).Key;}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233                 \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{00234                 \{}
+\DoxyCodeLine{00235                     \textcolor{keywordflow}{case} ConsoleKey.UpArrow:}
+\DoxyCodeLine{00236                     \{}
+\DoxyCodeLine{00237                         \textcolor{keywordflow}{if} (currentSelection >= actionsPerLine)}
+\DoxyCodeLine{00238                         \{}
+\DoxyCodeLine{00239                             currentSelection -\/= actionsPerLine;}
+\DoxyCodeLine{00240                         \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00243                     \}}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245                     \textcolor{keywordflow}{case} ConsoleKey.DownArrow:}
+\DoxyCodeLine{00246                     \{}
+\DoxyCodeLine{00247                         \textcolor{keywordflow}{if} (currentSelection + actionsPerLine < actions.Count)}
+\DoxyCodeLine{00248                         \{}
+\DoxyCodeLine{00249                             currentSelection += actionsPerLine;}
+\DoxyCodeLine{00250                         \}}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253                     \}}
+\DoxyCodeLine{00254                     \textcolor{keywordflow}{case} ConsoleKey.LeftArrow:}
+\DoxyCodeLine{00255                     \{}
+\DoxyCodeLine{00256                         \textcolor{keywordflow}{if} (currentSelection \% actionsPerLine > 0)}
+\DoxyCodeLine{00257                         \{}
+\DoxyCodeLine{00258                             currentSelection-\/-\/;}
+\DoxyCodeLine{00259                         \}}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00262                     \}}
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264                     \textcolor{keywordflow}{case} ConsoleKey.RightArrow:}
+\DoxyCodeLine{00265                     \{}
+\DoxyCodeLine{00266                         \textcolor{keywordflow}{if} (currentSelection \% actionsPerLine < actionsPerLine -\/ 1)}
+\DoxyCodeLine{00267                         \{}
+\DoxyCodeLine{00268                             currentSelection++;}
+\DoxyCodeLine{00269                         \}}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00272                     \}}
+\DoxyCodeLine{00273                 \}}
+\DoxyCodeLine{00274             \} \textcolor{keywordflow}{while} (key != ConsoleKey.Enter);}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276             \textcolor{keywordflow}{return} actions[currentSelection].What;}
+\DoxyCodeLine{00277         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}\label{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!PrintInfo@{PrintInfo}}
+\index{PrintInfo@{PrintInfo}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{PrintInfo()}{PrintInfo()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Print\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zeigt eine Information über das Programm an. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00327}{327}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00328         \{}
+\DoxyCodeLine{00329             Coordinate currentPosition = \textcolor{keyword}{new} Coordinate();}
+\DoxyCodeLine{00330             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00331             CenterString(\textcolor{stringliteral}{"{}Terminal Arena"{}}, currentPosition);}
+\DoxyCodeLine{00332             currentPosition.NextLine();}
+\DoxyCodeLine{00333             CenterString(\textcolor{stringliteral}{"{}v. 1"{}}, currentPosition);}
+\DoxyCodeLine{00334             currentPosition.NextLine();}
+\DoxyCodeLine{00335             CenterString(\textcolor{stringliteral}{"{}Press enter to return to the menu"{}}, currentPosition);}
+\DoxyCodeLine{00336             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00337             \{}
+\DoxyCodeLine{00338             \} \textcolor{keywordflow}{while} (Console.ReadKey(\textcolor{keyword}{true}).Key != ConsoleKey.Enter);}
+\DoxyCodeLine{00339         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a1b8dcc632b5da530b0a9a935892636e1}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a1b8dcc632b5da530b0a9a935892636e1}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!PrintLine@{PrintLine}}
+\index{PrintLine@{PrintLine}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{PrintLine()}{PrintLine()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+User\+Interface.\+Print\+Line (\begin{DoxyParamCaption}\item[{string}]{message = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Gibt eine Zeichenfolge im Inhaltsbereich aus und springt in die nächste Zeile (wie Console.\+Write\+Line). Ohne Zeichenfolge wird der Cursor nur in die nächste Zeile gesetzt. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em message} & Zeichenfolge\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00384}{384}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00385         \{}
+\DoxyCodeLine{00386             Coordinate pos = \textcolor{keyword}{new} Coordinate();}
+\DoxyCodeLine{00387             Console.SetCursorPosition(pos.X, pos.Y);}
+\DoxyCodeLine{00388             Console.Write(message);}
+\DoxyCodeLine{00389             Console.SetCursorPosition(pos.X, pos.Y + 1);}
+\DoxyCodeLine{00390         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}\label{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}} 
+\index{TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}!PrintMenu@{PrintMenu}}
+\index{PrintMenu@{PrintMenu}!TerminalArena.Classes.UserInterface@{TerminalArena.Classes.UserInterface}}
+\doxyparagraph{\texorpdfstring{PrintMenu()}{PrintMenu()}}
+{\footnotesize\ttfamily int Terminal\+Arena.\+Classes.\+User\+Interface.\+Print\+Menu (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{params string\mbox{[}$\,$\mbox{]}}]{options }\end{DoxyParamCaption})}
+
+
+
+Zeigt ein Menü mit den gegebenen Optionen an. Gibt den Index der gewählten Option zurück. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em title} & Der Titel des Menüs\\
+\hline
+{\em options} & Eine Liste von Optionen\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Index der gewählten Option
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{_user_interface_8cs_source_l00135}{135}} der Datei \mbox{\hyperlink{_user_interface_8cs_source}{User\+Interface.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136         \{}
+\DoxyCodeLine{00137             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00138             ClearTitleArea();}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140             \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(title);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142             \textcolor{keywordtype}{int} currentSelection = 0;}
+\DoxyCodeLine{00143             ConsoleKey key;}
+\DoxyCodeLine{00144             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00145             \{}
+\DoxyCodeLine{00146                 Coordinate position =}
+\DoxyCodeLine{00147                     \textcolor{keyword}{new} Coordinate(Console.WindowWidth -\/ \_contentWidth, Console.WindowHeight -\/ \_contentHeight);}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < options.Length; i++)}
+\DoxyCodeLine{00150                 \{}
+\DoxyCodeLine{00151                     \textcolor{keywordflow}{if} (i == currentSelection)}
+\DoxyCodeLine{00152                     \{}
+\DoxyCodeLine{00153                         Console.ForegroundColor = ConsoleColor.Red;}
+\DoxyCodeLine{00154                     \}}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156                     CenterString(options[i], position);}
+\DoxyCodeLine{00157                     position.NextLine();}
+\DoxyCodeLine{00158                     Console.ResetColor();}
+\DoxyCodeLine{00159                 \}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162                 key = Console.ReadKey(\textcolor{keyword}{true}).Key;}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164                 \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{00165                 \{}
+\DoxyCodeLine{00166                     \textcolor{keywordflow}{case} ConsoleKey.DownArrow:}
+\DoxyCodeLine{00167                     \{}
+\DoxyCodeLine{00168                         \textcolor{keywordflow}{if} (currentSelection + 1 > options.Length -\/ 1)}
+\DoxyCodeLine{00169                         \{}
+\DoxyCodeLine{00170                             currentSelection = 0;}
+\DoxyCodeLine{00171                         \}}
+\DoxyCodeLine{00172                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00173                         \{}
+\DoxyCodeLine{00174                             currentSelection += 1;}
+\DoxyCodeLine{00175                         \}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178                     \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180                     \textcolor{keywordflow}{case} ConsoleKey.UpArrow:}
+\DoxyCodeLine{00181                     \{}
+\DoxyCodeLine{00182                         \textcolor{keywordflow}{if} (currentSelection -\/ 1 < 0)}
+\DoxyCodeLine{00183                         \{}
+\DoxyCodeLine{00184                             currentSelection = options.Length -\/ 1;}
+\DoxyCodeLine{00185                         \}}
+\DoxyCodeLine{00186                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00187                         \{}
+\DoxyCodeLine{00188                             currentSelection -\/= 1;}
+\DoxyCodeLine{00189                         \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00192                     \}}
+\DoxyCodeLine{00193                 \}}
+\DoxyCodeLine{00194             \} \textcolor{keywordflow}{while} (key != ConsoleKey.Enter);}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196             \textcolor{keywordflow}{return} currentSelection;}
+\DoxyCodeLine{00197         \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+User\+Interface.\+cs\end{DoxyCompactItemize}

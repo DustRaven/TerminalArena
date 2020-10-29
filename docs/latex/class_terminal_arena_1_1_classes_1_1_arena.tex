@@ -1,0 +1,131 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_arena}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Arena Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_arena}\index{TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}}
+
+
+Repräsentiert die \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}} für einen Kampf.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Arena\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_terminal_arena_1_1_classes_1_1_arena__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a45bb8fb09278067dc74bd962b183d695}{Arena}} ()
+\begin{DoxyCompactList}\small\item\em Erstellt die \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}{Start\+Fight}} ()
+\begin{DoxyCompactList}\small\item\em Beginnt den Kampf gegen alle Gegner in der Liste \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propertys}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{User\+Interface}} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Das Benutzerinterface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Repräsentiert die \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}} für einen Kampf. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_arena_8cs_source_l00010}{10}} der Datei \mbox{\hyperlink{_arena_8cs_source}{Arena.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_arena_a45bb8fb09278067dc74bd962b183d695}\label{class_terminal_arena_1_1_classes_1_1_arena_a45bb8fb09278067dc74bd962b183d695}} 
+\index{TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}!Arena@{Arena}}
+\index{Arena@{Arena}!TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}}
+\doxyparagraph{\texorpdfstring{Arena()}{Arena()}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Arena.\+Arena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erstellt die \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}}. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_arena_8cs_source_l00024}{24}} der Datei \mbox{\hyperlink{_arena_8cs_source}{Arena.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025         \{}
+\DoxyCodeLine{00026             GenerateEnemies();}
+\DoxyCodeLine{00027             SetupPlayer();}
+\DoxyCodeLine{00028         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}\label{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}} 
+\index{TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}!StartFight@{StartFight}}
+\index{StartFight@{StartFight}!TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}}
+\doxyparagraph{\texorpdfstring{StartFight()}{StartFight()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Arena.\+Start\+Fight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Beginnt den Kampf gegen alle Gegner in der Liste 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_arena_8cs_source_l00033}{33}} der Datei \mbox{\hyperlink{_arena_8cs_source}{Arena.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034         \{}
+\DoxyCodeLine{00035             var choice = 0;}
+\DoxyCodeLine{00036             \textcolor{keywordflow}{while} (\_player.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}() \&\& choice == 0)}
+\DoxyCodeLine{00037             \{}
+\DoxyCodeLine{00038                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a16ab3b87f8398335caba5e7cefbab5df}{DrawActionBorder}}();}
+\DoxyCodeLine{00039                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a58a567840790afa5cd96b6a58b8b2ee4}{ClearActionArea}}();}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041                 Fight fight = \textcolor{keyword}{new} Fight(\_enemies.First(), \_player, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}});}
+\DoxyCodeLine{00042                 fight.DoFight();}
+\DoxyCodeLine{00043                 }
+\DoxyCodeLine{00044                 \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00045                 choice = \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}}.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{PrintMenu}}(\textcolor{stringliteral}{"{}Nächste Runde?"{}}, \textcolor{stringliteral}{"{}Nächste Runde"{}}, \textcolor{stringliteral}{"{}Beenden"{}});}
+\DoxyCodeLine{00046                 \textcolor{keywordflow}{if} (choice == 1 || !\_player.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter_a3db0e0983deaab2a266767b76b79082b}{IsAlive}}())}
+\DoxyCodeLine{00047                 \{}
+\DoxyCodeLine{00048                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00049                 \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051                 \_enemies.Remove(\_enemies.First());}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Propertys}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}\label{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}} 
+\index{TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}!Ui@{Ui}}
+\index{Ui@{Ui}!TerminalArena.Classes.Arena@{TerminalArena.Classes.Arena}}
+\doxyparagraph{\texorpdfstring{Ui}{Ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{User\+Interface}} Terminal\+Arena.\+Classes.\+Arena.\+Ui\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Das Benutzerinterface 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_arena_8cs_source_l00015}{15}} der Datei \mbox{\hyperlink{_arena_8cs_source}{Arena.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Arena.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{_program_8cs_source}{}\doxysubsection{Program.\+cs}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{00003 \textcolor{keyword}{using} System.IO;}
+\DoxyCodeLine{00004 \textcolor{keyword}{using} Newtonsoft.Json;}
+\DoxyCodeLine{00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_terminal_arena}{TerminalArena}}.\mbox{\hyperlink{namespace_terminal_arena_1_1_classes}{Classes}};}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_terminal_arena}{TerminalArena}}}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00009}\mbox{\hyperlink{class_terminal_arena_1_1_program}{00009}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_terminal_arena_1_1_program}{Program}}}
+\DoxyCodeLine{00010     \{}
+\DoxyCodeLine{00011         \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{UserInterface}} \_ui;}
+\DoxyCodeLine{00012         \textcolor{keyword}{static} \textcolor{keywordtype}{void} Main()}
+\DoxyCodeLine{00013         \{}
+\DoxyCodeLine{00014             Initialize();}
+\DoxyCodeLine{00015             \_ui = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{UserInterface}}(\textcolor{stringliteral}{"{}Awesome Terminal Arena"{}});}
+\DoxyCodeLine{00016             \textcolor{keywordtype}{int} selection;}
+\DoxyCodeLine{00017             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00018             \{}
+\DoxyCodeLine{00019                 selection = \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a0797a8ba499d521b51cd893b2a05588a}{PrintMenu}}(\textcolor{stringliteral}{"{}Haupmenü"{}},\textcolor{stringliteral}{"{}Starten"{}}, \textcolor{stringliteral}{"{}Info"{}}, \textcolor{stringliteral}{"{}Beenden"{}});}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021                 \textcolor{keywordflow}{switch} (selection)}
+\DoxyCodeLine{00022                 \{}
+\DoxyCodeLine{00023                     \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00024                         \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}} arena = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena}{Arena}}();}
+\DoxyCodeLine{00025                         arena.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a85fb090d05dbb893c51dd73e4941588c}{Ui}} = \_ui;}
+\DoxyCodeLine{00026                         arena.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_arena_a83228d2a40961df1fdfc75664ff12e4d}{StartFight}}();}
+\DoxyCodeLine{00027                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00028                     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00029                         \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_abcbd608ec0afa8b1c41709285f50a28e}{PrintInfo}}();}
+\DoxyCodeLine{00030                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00031                     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00032                         Console.Clear();}
+\DoxyCodeLine{00033                         Console.WriteLine(\textcolor{stringliteral}{"{}Auf Wiedersehen!"{}});}
+\DoxyCodeLine{00034                         Environment.Exit(0);}
+\DoxyCodeLine{00035                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00036                 \}}
+\DoxyCodeLine{00037             \} \textcolor{keywordflow}{while} (selection != 2);}
+\DoxyCodeLine{00038         \}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{keyword}{static} \textcolor{keywordtype}{void} Initialize()}
+\DoxyCodeLine{00041         \{}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{if} (File.Exists(\textcolor{stringliteral}{@"{}names.json"{}})) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00043             }
+\DoxyCodeLine{00044             List<string> names =  \textcolor{keyword}{new} List<string>}
+\DoxyCodeLine{00045             \{}
+\DoxyCodeLine{00046                 \textcolor{stringliteral}{"{}Seidir"{}}, \textcolor{stringliteral}{"{}Haraikala"{}},}
+\DoxyCodeLine{00047                 \textcolor{stringliteral}{"{}Ywain"{}}, \textcolor{stringliteral}{"{}Sedir"{}},}
+\DoxyCodeLine{00048                 \textcolor{stringliteral}{"{}Mirnhilda"{}}, \textcolor{stringliteral}{"{}Traviynla"{}},}
+\DoxyCodeLine{00049                 \textcolor{stringliteral}{"{}Machalich"{}}, \textcolor{stringliteral}{"{}Áille"{}},}
+\DoxyCodeLine{00050                 \textcolor{stringliteral}{"{}Uathach"{}}, \textcolor{stringliteral}{"{}Lothur"{}},}
+\DoxyCodeLine{00051                 \textcolor{stringliteral}{"{}Igraine"{}}, \textcolor{stringliteral}{"{}Setana"{}},}
+\DoxyCodeLine{00052                 \textcolor{stringliteral}{"{}Fiall"{}}, \textcolor{stringliteral}{"{}Gwalchmai"{}},}
+\DoxyCodeLine{00053                 \textcolor{stringliteral}{"{}Firael"{}}, \textcolor{stringliteral}{"{}Taltin"{}},}
+\DoxyCodeLine{00054                 \textcolor{stringliteral}{"{}Rhonabwy"{}}, \textcolor{stringliteral}{"{}Vialigh"{}},}
+\DoxyCodeLine{00055                 \textcolor{stringliteral}{"{}Albhe"{}}, \textcolor{stringliteral}{"{}Norbwyn"{}},}
+\DoxyCodeLine{00056                 \textcolor{stringliteral}{"{}Tuadh"{}}, \textcolor{stringliteral}{"{}Boronwyn"{}}}
+\DoxyCodeLine{00057             \};}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059             File.WriteAllText(\textcolor{stringliteral}{@"{}names.json"{}}, JsonConvert.SerializeObject(names));}
+\DoxyCodeLine{00060         \}}
+\DoxyCodeLine{00061     \}}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}

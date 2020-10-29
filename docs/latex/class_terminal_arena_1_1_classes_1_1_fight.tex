@@ -1,0 +1,139 @@
+\hypertarget{class_terminal_arena_1_1_classes_1_1_fight}{}\doxysubsection{Terminal\+Arena.\+Classes.\+Fight Klassenreferenz}
+\label{class_terminal_arena_1_1_classes_1_1_fight}\index{TerminalArena.Classes.Fight@{TerminalArena.Classes.Fight}}
+
+
+Diese Klasse repräsentiert einen Kampf.  
+
+
+
+
+Zusammengehörigkeiten von Terminal\+Arena.\+Classes.\+Fight\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_terminal_arena_1_1_classes_1_1_fight__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fight_ab8d2f265d9ccf96e3485132595eaeaa0}{Fight}} (\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}} enemy, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}} player, \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{User\+Interface}} ui)
+\begin{DoxyCompactList}\small\item\em Initialisiert einen Kampf zwischen zwei Kämpfern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fight_a6865e9c513dede111bc53248f18a3203}{Do\+Fight}} ()
+\begin{DoxyCompactList}\small\item\em Führt den Kampf aus, bis einer der Kämpfer stirbt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Ausführliche Beschreibung}
+Diese Klasse repräsentiert einen Kampf. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fight_8cs_source_l00011}{11}} der Datei \mbox{\hyperlink{_fight_8cs_source}{Fight.\+cs}}.
+
+
+
+\doxysubsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fight_ab8d2f265d9ccf96e3485132595eaeaa0}\label{class_terminal_arena_1_1_classes_1_1_fight_ab8d2f265d9ccf96e3485132595eaeaa0}} 
+\index{TerminalArena.Classes.Fight@{TerminalArena.Classes.Fight}!Fight@{Fight}}
+\index{Fight@{Fight}!TerminalArena.Classes.Fight@{TerminalArena.Classes.Fight}}
+\doxyparagraph{\texorpdfstring{Fight()}{Fight()}}
+{\footnotesize\ttfamily Terminal\+Arena.\+Classes.\+Fight.\+Fight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}}}]{enemy,  }\item[{\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_fighter}{Fighter}}}]{player,  }\item[{\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface}{User\+Interface}}}]{ui }\end{DoxyParamCaption})}
+
+
+
+Initialisiert einen Kampf zwischen zwei Kämpfern. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em enemy} & Der Gegner\\
+\hline
+{\em player} & Der Spieler\\
+\hline
+{\em ui} & Eine Instanz des Interface\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{_fight_8cs_source_l00024}{24}} der Datei \mbox{\hyperlink{_fight_8cs_source}{Fight.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025         \{}
+\DoxyCodeLine{00026             \_enemy = enemy;}
+\DoxyCodeLine{00027             \_player = player;}
+\DoxyCodeLine{00028             \_dice = \textcolor{keyword}{new} \mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice}{Dice}}(2);}
+\DoxyCodeLine{00029             \_ui = ui;}
+\DoxyCodeLine{00030         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_terminal_arena_1_1_classes_1_1_fight_a6865e9c513dede111bc53248f18a3203}\label{class_terminal_arena_1_1_classes_1_1_fight_a6865e9c513dede111bc53248f18a3203}} 
+\index{TerminalArena.Classes.Fight@{TerminalArena.Classes.Fight}!DoFight@{DoFight}}
+\index{DoFight@{DoFight}!TerminalArena.Classes.Fight@{TerminalArena.Classes.Fight}}
+\doxyparagraph{\texorpdfstring{DoFight()}{DoFight()}}
+{\footnotesize\ttfamily void Terminal\+Arena.\+Classes.\+Fight.\+Do\+Fight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Führt den Kampf aus, bis einer der Kämpfer stirbt. 
+
+
+
+Definiert in Zeile \mbox{\hyperlink{_fight_8cs_source_l00048}{48}} der Datei \mbox{\hyperlink{_fight_8cs_source}{Fight.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049         \{}
+\DoxyCodeLine{00050             Fighter first = \_player;}
+\DoxyCodeLine{00051             Fighter second = \_enemy;}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053             \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_a555deeb8525af5d307d74b3389c163c7}{DrawTitle}}(\$\textcolor{stringliteral}{"{}\{\_player\} vs \{\_enemy\}"{}});}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055             \textcolor{keywordtype}{bool} secondGoesFirst = \_dice.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_a1679877f85b2038333c65de705209ac4}{Roll}}() <= \_dice.\mbox{\hyperlink{class_terminal_arena_1_1_helpers_1_1_dice_ae28412ae48f8fb979ffe8e3c275da681}{GetSides}}() / 2;}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{if} (secondGoesFirst)}
+\DoxyCodeLine{00057             \{}
+\DoxyCodeLine{00058                 first = \_enemy;}
+\DoxyCodeLine{00059                 second = \_player;}
+\DoxyCodeLine{00060             \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062             \textcolor{keywordflow}{while} (first.IsAlive() \&\& second.IsAlive())}
+\DoxyCodeLine{00063             \{}
+\DoxyCodeLine{00064                 \textcolor{keywordtype}{string} action;}
+\DoxyCodeLine{00065                 \textcolor{keywordflow}{if} (first.Actions.Count > 0)}
+\DoxyCodeLine{00066                 \{}
+\DoxyCodeLine{00067                     action = \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}{PrintActions}}(first.Actions);}
+\DoxyCodeLine{00068                     first.DoAction(action);}
+\DoxyCodeLine{00069                 \}}
+\DoxyCodeLine{00070                 \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00071                 first.Attack(second);}
+\DoxyCodeLine{00072                 PrintFighter(first);}
+\DoxyCodeLine{00073                 PrintFighter(second);}
+\DoxyCodeLine{00074                 PrintMessage(first.Message);}
+\DoxyCodeLine{00075                 PrintMessage(second.Message);}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077                 \textcolor{keywordflow}{if} (second.IsAlive())}
+\DoxyCodeLine{00078                 \{}
+\DoxyCodeLine{00079                     \textcolor{keywordflow}{if} (second.Actions.Count > 0)}
+\DoxyCodeLine{00080                     \{}
+\DoxyCodeLine{00081                         action = \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_ac8384366c285e27305c53c6cdc2e996d}{PrintActions}}(second.Actions);}
+\DoxyCodeLine{00082                         second.DoAction(action);}
+\DoxyCodeLine{00083                     \}}
+\DoxyCodeLine{00084                     \_ui.\mbox{\hyperlink{class_terminal_arena_1_1_classes_1_1_user_interface_aee9df0aea9ed8518d48c6684cea30333}{ClearContentArea}}();}
+\DoxyCodeLine{00085                     second.Attack(first);}
+\DoxyCodeLine{00086                     PrintFighter(first);}
+\DoxyCodeLine{00087                     PrintFighter(second);}
+\DoxyCodeLine{00088                     PrintMessage(second.Message);}
+\DoxyCodeLine{00089                     PrintMessage(first.Message);}
+\DoxyCodeLine{00090                 \}}
+\DoxyCodeLine{00091             \}}
+\DoxyCodeLine{00092         \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+Fight.\+cs\end{DoxyCompactItemize}
